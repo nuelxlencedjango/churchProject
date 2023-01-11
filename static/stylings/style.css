@@ -1,0 +1,458 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+.e-commerce{
+    width: 100%;
+    height: 100vh;
+   
+    background-image: linear-gradient(rgba(12,3,51,0.3),rgba(12,3,51,0.3));
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+nav{
+    width: 100%;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+    
+}
+nav .logo{
+    width: 80px;
+    border-radius: 50%;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+nav ul li:hover{
+    color: #fff;
+
+}
+.content{
+    text-align: center;
+
+}
+.content h1{
+    font-size: 40px;
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.content h1:hover{
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+.content a{
+    text-decoration: dashed;
+    display: inline-block;
+    color: green;
+    font-size: 22px;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 50px;
+    padding: 20px;
+}
+.backgroundVideo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+
+}
+.connections{
+    /*margin-top: 500px;*/
+    position: relative;
+    top: 35%;
+}
+.connections ul{
+    display: inline-flex;
+    transition: all 2s ease-in-out;
+}
+.connections ul li{
+    list-style: none;
+    width: 150px;
+    /*border: 2px solid white;*/
+    margin: 10px;
+    height: 50px;
+    border: 2px solid hsl(213, 91%, 36%);
+}
+.connections ul li:hover{
+    transition: all 1s ease-in;
+    background: navy;
+    background: hsl(213, 91%, 36%);
+}
+.connections ul li a{
+    color: #fff;
+    text-align: center;
+    margin: 15px;
+    font-size: 18px;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    top: 10px;
+}
+.churchMessage{
+    transition: all 3s ease-in;
+    background-color: hsl(213, 91%, 36%);
+    height: 100vh;
+}
+.churchMessage .information .container{ 
+    width: auto;
+   margin-left: 250px;
+  
+   word-break: break-all;
+  
+}
+.churchMessage .information > .container{
+   
+   position: relative;
+   top: 80px;
+}
+.information .container h3{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff;
+}
+.information .container .text{
+    margin: 30px;
+    width: 700px;
+}
+.information .container .text h2{
+    margin-top: 30px;
+    color: #fff;
+    font-size: 22px;
+}
+.information .container .text p{
+    margin-top: 20px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 200;
+  
+   word-wrap: break-word;
+   
+    
+    font-family: 'Times New Roman', Times, serif
+}
+ .text .readmore{
+    margin-top: 60px;
+    width: 150px;
+    border: 2x solid hsl(213, 91%, 36%);
+    background-color: #fff;
+   
+    height: 50px;
+    
+}
+.text .readmore:hover{
+    background-color: brown;
+    color: #000;
+    transition: 1s ease-in-out;
+}
+.text .readmore a{
+    text-decoration: none;
+    font-size: 22px;
+    
+    text-transform: capitalize;
+    color: hsl(213, 91%, 36%);
+    text-align: center;
+    position: relative;
+    top: 10px;
+    margin-left: 20px;
+}
+.churchInfo{
+    transition: all 3s ease-in;
+   
+    height: 80vh;
+    z-index: -1 !important;
+}
+.churchInfo label{
+    margin-top: 50px;
+    margin-left: 40px;
+    color: hsl(213, 91%, 36%);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+.address h3{
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size: 22px;
+}
+.direction{
+    margin-left: 40px;
+    margin-top: 50px;
+    width: 140px;
+    border-bottom: 2px solid #fff;
+    /*border: 2px solid rebeccapurple;*/
+
+}
+.direction a{
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+    color: hsl(213, 91%, 36%);
+    
+}
+.direction:hover{
+    background: black;
+    color: #fff;
+    transition: 3s ease-in-out;
+}
+.service{
+    margin-top: 50px;
+    margin-left: 40px;
+}
+.service h4{
+    color: hsl(213, 91%, 36%);
+    font-weight: 700;
+}
+
+/* slide*/
+.slide{
+    transition: all 3s ease-in;
+    height: 75vh;
+    background-color: hsl(213, 91%, 36%)
+}
+
+.slide .motivation{
+    position: relative;
+    top: 50px;
+    margin-left: 50px;
+}
+.slide .motivation .item .col-md-6{
+    width: 500px;
+}
+/*.motivation .item .col-md-6 h2{
+ 
+    margin-top: 30px;
+  
+    font-size: 22px;
+}*/
+
+.motivation .col-md-6 h3{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff;
+}
+/*.learnFamily .container{
+    position: relative;
+   top: 80px;
+}*/
+
+
+.motivation .item .col-md-6 h2{
+    margin-top: 30px;
+    /*color: #fff;*/
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.motivation .item .col-md-6 h6{
+    margin-top: 20px;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-style: italic;
+}
+ .motivation .item .col-md-6 p{
+    margin-top: 20px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: 'Times New Roman', Times, serif
+}
+button.owl-prev{
+    position: absolute;
+    top: 30%;
+    width: 100px;
+    left: -80px;
+   
+}
+button.owl-next{
+    position: absolute;
+    top: 30%;
+    width: 100px;
+   right: -20px;
+   
+}
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+    
+    color: #fff;
+    font-size: 50px !important;
+    margin: 10px;
+    font-weight: 800 !important;
+}
+
+/*slide end*/
+
+
+.fa-solid{
+    color: #fff;
+    font-size: 28px;
+    margin: 10px;
+    
+}
+.left-arrow{
+   
+   
+    width: 50px;
+    margin: 20px;
+    position: absolute;
+    top: 40%;
+    left: -60px;
+}
+.left-arrow:hover{
+    background: red;
+    transition: 1s ease-in;
+}
+
+.right-arrow{
+   width: 50px;
+   margin: 20px;
+   position: absolute;
+   top: 40%;
+   right: -60px;
+}
+.right-arrow:hover{
+    background: red;
+    transition: 1s ease-in;
+}
+footer{
+    width: 100%;
+    height: 60vh;
+    transition: all 3s ease-in-out;
+    position: relative;
+    padding: 0 5%;
+    /*display: flex;*/
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+.image-body{
+    margin-top: 50px;
+}
+footer .image-body img{
+    
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+   
+    
+}
+.brand-name h4{
+   color: hsl(213, 91%, 36%);
+   font-size: 22px;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: 700;
+}
+.image-body .text{
+    margin-top: 15px;
+}
+.image-body h5{
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.social{
+    margin-top: 30px;
+
+}
+.social a{
+    margin: 10px;
+    font-size: 24px;
+    color: hsl(213, 91%, 36%);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+}
+.contact h3{
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    color: hsl(213, 91%, 36%);
+    font-weight: 700;
+}
+.contact{
+    margin-top: 50px;
+}
+
+ul li{
+    list-style: none;
+}
+ul li a{
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    border-bottom: hsl(213, 91%, 36%);
+}
+.info-right h5{
+    color: hsl(213, 91%, 36%);
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+.info-right p{
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.link{
+    width: 120px;
+    background-color: #fff;
+    border: 2px solid whitesmoke;
+    height: 40px;
+}
+.link:hover{
+    background-color: #000;
+    color: #fff;
+    transition: all 1s ease-in-out;
+}
+.link a{
+    text-decoration: none;
+    color: hsl(213, 91%, 36%);
+    font-size: 18px;
+    text-align: center;
+    margin: 5px;
+    text-transform: capitalize;
+}
+
+/*map css*/
+.mapouter{
+    position:relative;
+    text-align:right;
+    height:500px;width:600px;
+    }
+ /*end map*/   
+
+@media screen and (max-width: 990px) {
+    nav{
+        display: none;
+    }
+}

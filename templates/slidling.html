@@ -1,0 +1,91 @@
+
+<style>
+    #slides {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    height: 300px;
+    display: none;
+}
+
+#prev-btn, #next-btn {
+    padding: 8px 16px;
+    font-size: 16px;
+    color: white;
+    background-color: #333;
+    cursor: pointer;
+    border: none;
+}
+
+#prev-btn {
+    float: left;
+}
+
+#next-btn {
+    float: right;
+}
+</style>
+
+<div id="slides">
+    <div class="slide" id="slide1">Slide 1</div>
+    <div class="slide" id="slide2">Slide 2</div>
+    <div class="slide" id="slide3">Slide 3</div>
+    <div class="slide" id="slide4">Slide 4</div>
+</div>
+<button id="prev-btn">Prev</button>
+<button id="next-btn">Next</button>
+
+<script>
+    var slides = document.querySelectorAll('.slide');
+    var currentSlide = 0;
+
+    function showSlide(n) {
+        slides[currentSlide].style.display = 'none';
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].style.display = 'block';
+    }
+
+    var prevBtn = document.getElementById('prev-btn');
+    prevBtn.addEventListener('click', function() {
+        showSlide(currentSlide - 1);
+    });
+
+    var nextBtn = document.getElementById('next-btn');
+    nextBtn.addEventListener('click', function() {
+        showSlide(currentSlide + 1);
+    });
+
+    // Show the first slide when the page loads
+    showSlide(0);
+</script>
+
+
+
+<script>
+    var slides = document.querySelectorAll('.slide');
+    var currentSlide = 0;
+    function showSlide(n) {
+        slides[currentSlide].style.display = 'none';
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].style.display = 'block';
+    }
+    // Listen for click events on all "prev" buttons
+    var prevBtns = document.querySelectorAll('.prev-btn');
+    for(let i=0; i<prevBtns.length; i++) {
+        prevBtns[i].addEventListener('click', function() {
+            showSlide(currentSlide - 1);
+        });
+    }
+
+    // Listen for click events on all "next" buttons
+    var nextBtns = document.querySelectorAll('.next-btn');
+    for(let i=0; i<nextBtns.length; i++) {
+        nextBtns[i].addEventListener('click', function() {
+            showSlide(currentSlide + 1);
+        });
+    }
+    showSlide(0);
+</script>

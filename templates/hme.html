@@ -1,0 +1,146 @@
+
+{% extends 'layout/base.html' %}
+{% load static%}
+{% block content %} 
+
+{% load crispy_forms_tags %}
+
+
+    
+
+
+    <div class="e-commerce">
+        <video autoplay loop muted plays-inline class="backgroundVideo">
+            <source src="/static/video/atmosphere.mp4">
+        </video>
+        {% include 'layout/navigation.html' %}
+      
+    <div class="connections" >
+        <ul>
+            <li><a href="" >watch</a></li>
+            <li> <a href="" >growth track</a></li>
+            <li>  <a href="" >small groups</a></li>
+            <li> <a href="" >give</a></li>
+        </ul>
+    </div>
+    </div>
+
+
+
+   <div class="churchMessage">
+    <div class="information">
+        <div class="container">
+         <h3>Our dna</h3>
+         <div class="text">
+             <h2>Jesus is our message. People are our heart. His church is what we build.</h2>
+             <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse alias, rerum deserunt impedit in perspiciatis, minus a laborum omnis labore, consectetur natus rem quia fugiat libero tempore quibusdam excepturi quasi.</p>
+             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus perferendis magni repudiandae saepe obcaecati animi sit repellat, odit, assumenda illum nihil nulla ad, omnis expedita dolorem laboriosam illo odio error.</p>
+ 
+             <div class="readmore">
+                 <a href="">read more about us </a>
+             </div>
+         </div>
+        </div>
+     </div>
+   </div>
+   
+ <div class="churchInfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="">TIMES & LOCATION</label>
+                <div class="location">
+                    <div class="address">
+                        <h3>4242 Koppe Bridge Road, Suite 100,<br><br> College Station, TX 77845</h3>
+                        
+                    </div>
+                    <div class="direction">
+                        <a href="">Get Direction</a>
+                    </div>
+                    <div class="service">
+                        <h4>Service Times</h4>
+                        <p>Sunday: 10:00AM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe width="600" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=4242%20Koppe%20Bridge%20Rd%20Suite%20100,%20College&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+
+                        </iframe>
+                      
+                        <br>
+ 
+                        <a href="https://www.embedgooglemap.net"></a>
+                       
+                    </div></div>
+            </div>
+        </div>
+    </div>
+ </div>  
+
+
+
+<div class="slide">
+    <div class="motivation">
+<div class="owl-carousel owl-theme">
+    {% for item in obj %}
+    <div class="item">
+        
+        <div class="col-md-6 ">
+            <h6>SMALL GROUPS</h6>
+            <h2>{{ item.title }}</h2>
+            <p>{{ item.mesg }}</p>
+            <div class="link">
+                <a href="">read more</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+    </div>
+</div>
+
+{% include 'footer/footer.html' %}
+
+
+
+
+
+<script>
+    $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      responsiveClass:true,
+      responsive:{
+          0:{
+              items:1,
+              nav:true
+          },
+          600:{
+              items:2,
+              nav:false
+          },
+          1000:{
+              items:2,
+              nav:true,
+              loop:false
+          }
+      }
+  })
+  </script>
+<style>
+
+    </style>
+
+<style>
+/*.mapouter{
+    position:relative;
+    text-align:right;
+    height:500px;
+    width:600px;
+    }*/</style>
+
+
+{% endblock %}

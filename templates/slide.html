@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet"> 
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" >
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    
+    <!--animation link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+
+<link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+
+
+<!--owl carousel -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!--customer style-->
+
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+</head>
+<body>
+
+
+
+
+<div class="owl-carousel owl-theme">
+  <div class="item"><h4>1</h4></div>
+  <div class="item"><h4>2</h4></div>
+  <div class="item"><h4>3</h4></div>
+  <div class="item"><h4>4</h4></div>
+  <div class="item"><h4>5</h4></div>
+  <div class="item"><h4>6</h4></div>
+  <div class="item"><h4>7</h4></div>
+  <div class="item"><h4>8</h4></div>
+  <div class="item"><h4>9</h4></div>
+  <div class="item"><h4>10</h4></div>
+  <div class="item"><h4>11</h4></div>
+  <div class="item"><h4>12</h4></div>
+</div>
+<style>
+     .want_to_buy{
+        display: none;
+    }
+    .display{
+        display: none;
+    }
+    .property-search{
+        display: none;
+    }
+    .featured{
+        display: none;
+    }
+    /*carousel*/
+  
+    .slide-container .prev,
+  .slide-container .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .slide-container .prev:hover,
+  .slide-container .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+  }
+  
+  .slide-container .prev {
+    left: 2px;
+  }
+  
+  .slide-container .next {
+    right: 2px;
+  }
+  
+  /*very important */
+  .dots-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .dots-container .dot {
+    cursor: pointer;
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+    color: #333;
+    border-radius: 50%;
+    background-color: #dfd6ce;
+  }
+  
+  .dots-container .dot.active {
+    border: 2px solid #000;
+  }
+  
+  
+ 
+  .tour h1 {
+    text-align: center;
+    color: #999;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .slide-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+    max-height: 350px;
+  }
+  
+  .slide-container .slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slide-container .slide.mod {
+    animation: fade 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    width: 600px;
+    height: 350px;
+  }
+  
+  .slide-container .slide img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+    
+    </style>
+
+
+
+    <!--<section class="tour">
+        <div class="container">
+            <h1>Take a tour of the property</h1>
+            <div class="slide-container">
+           
+              <div class="slide mod {% if forloop.counter0 == 0 %}active{% endif %}" id="slide{{ forloop.counter }}">
+                <img src="{{ pic.images_of_property.url }}"   alt='not found'>
+                <h4>hepp</h4>
+              </div>
+              
+              
+        
+              <a href="#" class="prev" title="Previous">&#10094</a>
+              <a href="#" class="next" title="Next">&#10095</a>
+            </div>
+            <div class="dots-container">
+               
+              <span class="dot"></span>
+            
+          
+            </div>
+         </div>
+    </section>-->
+ 
+    
+
+  
+  
+  
+  <script>
+    //sliders
+      let currentSlide = 0;
+  const slides = document.querySelectorAll(".slide")
+  const dots = document.querySelectorAll('.dot')
+  
+  const init = (n) => {
+    slides.forEach((slide, index) => {
+      slide.style.display = "none"
+      dots.forEach((dot, index) => {
+        dot.classList.remove("active")
+      })
+    })
+    slides[n].style.display = "block"
+    dots[n].classList.add("active")
+  }
+  document.addEventListener("DOMContentLoaded", init(currentSlide))
+  const next = () => {
+    currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
+    init(currentSlide)
+  }
+  
+  const prev = () => {
+    currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
+    init(currentSlide)
+  }
+  
+  document.querySelector(".next").addEventListener('click', next)
+  
+  document.querySelector(".prev").addEventListener('click', prev)
+  
+  
+  setInterval(() => {
+    next()
+  }, 3000);
+  
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      console.log(currentSlide)
+      init(i)
+      currentSlide = i
+    })
+  })
+
+
+  </script>
+
+<script>
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:2,
+            nav:true,
+            loop:false
+        }
+    }
+})
+</script>
+
+
+
+  
+
+  <!--javascriot links-->
+  
+
+  <script src="https://use.fontawesome.com/e503c766fc.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    
+
+
+  
+</body>
+</html>

@@ -1,0 +1,256 @@
+
+<style>
+    .navigation{
+  padding-top:30px;
+  padding-bottom:30px;
+  position:absolute;
+  top:0;
+  width:100%;
+  z-index:1;
+}
+
+.navbar-right{
+  float:right;
+  padding-right:10%;
+}
+
+.navbar-right a{
+  text-decoration:none;
+  padding:10px;
+  color: #fff;
+  font-family:Arial;
+  font-weight:900;
+}
+
+.navbar-right a:hover{
+  text-decoration:underline;
+}
+.navbar-logo{
+  padding-left:10%;
+  font-family:Arial;
+  font-size:30px;
+  font-weight:bold;
+  text-decoration:none;
+  color:#fff; 
+}
+
+.video-container {
+z-index: -100;
+width:100%;
+height:100%;
+/*height: 100vh;*/
+overflow:hidden;
+position:absolute;
+top:0;
+left:0;
+}
+
+#video-bg{
+  width:100%;
+ 
+}
+
+.portfolio-section{
+  margin-top:50%;
+}
+.tagline-left{
+  float:left;
+  width:50%;
+  text-align:center;
+}
+
+.tagline-right{
+  float:right;
+  width:50%;
+  text-align:center;
+}
+
+.tagline-video{
+  width:75%;
+}
+
+.tagline-right-text{
+ position:absolute;
+ margin-top:9%;
+ text-align:center;
+ margin-left:17%;
+font-family:Arial;
+ color:#fff;
+  width:290px;
+  font-size:40px;
+}
+
+.tagline-left-text{
+ position:absolute;
+ margin-top:9%;
+ text-align:center;
+ margin-left:11%;
+font-family:Arial;
+ color:#fff;
+  width:375px;
+  font-size:40px;
+}
+.connections{
+    position: absolute;
+    bottom: 5%;
+    align-items: center;
+    right: 50%;
+
+}
+.connections ul{
+    display: inline-flex;
+}
+.connections ul li{
+    list-style: none;
+    margin: 20px;
+    width: 100px;
+    border: 2px solid #fff;
+    transition: 5s all ease-in-out;
+    background-color: transparent;
+    transform: translateX(200%);
+    height: 30px;
+    align-items: center;
+
+}
+.connections ul li a{
+    text-align: center !important;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 300;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    text-transform: capitalize;
+   
+    /*margin-top: 20px;
+    margin: 5px;*/
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+}
+.connections ul li:hover{
+    transition: 1s all ease-in-out;
+    background-color: #18b818c1;
+}
+
+.churchMessage{
+    /*transition: all 3s ease-in;
+    width: 100%;
+   position: relative;
+   top: 80px;
+   background-color: aqua;*/
+}
+
+
+
+
+
+
+
+.portfolio-section{
+    background-color: blue;
+    height: 700px;
+}
+
+/*.information{
+    margin-top: 500px !important;
+}*/
+</style><header>
+    <div class="header">
+      <nav class="navigation">
+        <a href="#" class="navbar-logo">Logo</a>
+        <div class="navbar-right">
+          <a href="#">About</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>
+  
+      <div class="video-container">
+        <video autoplay loop muted id="video-bg">
+  
+          <source src="/static/video/beautiful.mp4" type="video/mp4">
+          <!--<source src="http://bigcom.com/assets/2014/08/iChooseB.mp4" type="video/mp4">-->
+        </video>
+      </div>
+    </div>
+
+  
+    <div class="connections" >
+        <ul>
+            <li><a href=""   class="btn btn-primary" style="margin-left: 30px; margin-top: 30px;">watch</a></li>
+            <li> <a href="" class="btn btn-primary">growth track</a></li>
+            <li>  <a href="" class="btn btn-primary">small groups</a></li>
+            <li> <a href="" class="btn btn-primary"  style="margin-left: 30px; margin-top: 30px;">give</a></li>
+        </ul>
+        
+     
+    </div>
+  </header>
+ 
+  <div class="churchMessage">
+    <div class="information">
+       <div class="container">
+        <h3>Our dna</h3>
+        <div class="text">
+            <h2>Jesus is our message. People are our heart. His church is what we build.</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse alias, rerum deserunt impedit in perspiciatis, minus a laborum omnis labore, consectetur natus rem quia fugiat libero tempore quibusdam excepturi quasi.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus perferendis magni repudiandae saepe obcaecati animi sit repellat, odit, assumenda illum nihil nulla ad, omnis expedita dolorem laboriosam illo odio error.</p>
+
+            <div class="readmore">
+                <a href="">read more</a>
+            </div>
+        </div>
+       </div>
+    </div>
+
+  <div class="portfolio-section">
+    <div class="churchMessage">
+        <div class="information">
+           <div class="container">
+            <h3>Our dna</h3>
+            <div class="text">
+                <h2>Jesus is our message. People are our heart. His church is what we build.</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse alias, rerum deserunt impedit in perspiciatis, minus a laborum omnis labore, consectetur natus rem quia fugiat libero tempore quibusdam excepturi quasi.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus perferendis magni repudiandae saepe obcaecati animi sit repellat, odit, assumenda illum nihil nulla ad, omnis expedita dolorem laboriosam illo odio error.</p>
+    
+                <div class="readmore">
+                    <a href="">read more</a>
+                </div>
+            </div>
+           </div>
+        </div>
+    <!--<div class="tagline-left">
+      <div class="tagline-left-text">Serving the waters that serve our state.</div>
+      <video autoplay muted loop class="tagline-video">
+        <source src="http://www.bigcom.com/assets/2014/10/asmc_bg2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="tagline-right">
+      <div class="tagline-right-text">The future is for workers</div>
+      <video autoplay muted loop class="tagline-video">
+        <source src="http://www.bigcom.com/assets/2014/08/GoBuildAlabama.mp4" type="video/mp4">
+      </video>
+    </div>-->
+  </div>
+  <div class="mapouter">
+    <div class="gmap_canvas">
+        <iframe width="500" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=4242%20Koppe%20Bridge%20Rd%20Suite%20100,%20College&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+
+        </iframe>
+        <!--<a href="https://123movies-to.org">123movies</a>-->
+        <br>
+        <style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style>
+        <a href="https://www.embedgooglemap.net"></a>
+        <style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style>
+    </div></div>
+
+<style>
+
+</style>
+
+<script>
+
+  
+
+
+</script>
