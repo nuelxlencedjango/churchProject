@@ -37,7 +37,7 @@
              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus perferendis magni repudiandae saepe obcaecati animi sit repellat, odit, assumenda illum nihil nulla ad, omnis expedita dolorem laboriosam illo odio error.</p>
  
              <div class="readmore">
-                 <a href="">read more about us </a>
+                 <a href="">read more </a>
              </div>
          </div>
         </div>
@@ -51,7 +51,8 @@
                 <label for="">TIMES & LOCATION</label>
                 <div class="location">
                     <div class="address">
-                        <h3>4242 Koppe Bridge Road, Suite 100,<br><br> College Station, TX 77845</h3>
+                        <h3>4242 Koppe Bridge Road, Suite 100,</h3>
+                        <h3>College Station, TX 77845</h3>
                         
                     </div>
                     <div class="direction">
@@ -66,7 +67,7 @@
             <div class="col-sm-6">
                 <div class="mapouter">
                     <div class="gmap_canvas">
-                        <iframe width="600" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=4242%20Koppe%20Bridge%20Rd%20Suite%20100,%20College&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                        <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=4242%20Koppe%20Bridge%20Rd%20Suite%20100,%20College&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
 
                         </iframe>
                       
@@ -114,11 +115,15 @@
       margin:10,
       responsiveClass:true,
       responsive:{
-          0:{
+        600:{
               items:1,
               nav:true
           },
-          600:{
+          680:{
+              items:2,
+              nav:true
+          },
+          770:{
               items:2,
               nav:false
           },
@@ -129,6 +134,8 @@
           }
       }
   })
+
+  
   </script>
 <style>
 
