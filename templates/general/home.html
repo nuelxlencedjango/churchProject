@@ -115,8 +115,8 @@
       margin:10,
       responsiveClass:true,
       responsive:{
-        600:{
-              items:1,
+        599:{
+              items:2,
               nav:true
           },
           680:{
@@ -138,16 +138,32 @@
   
   </script>
 <style>
+    @media screen and (max-width: 599px) {
+        .slide .motivation {
+    margin-left: 10px;
+     }
+       /* .owl-stage{
+            width: 100% !important;
+            display: flex;
+        }
+        .owl-theme{
+            width: 100%;
+        }
+        .owl-theme .item{
+            width: 100%;
+        }
+        .no-js .owl-carousel, .owl-carousel.owl-loaded {
+           
+}
+.owl-carousel.owl-loaded {
+ 
+}*/
+       
+    }
 
     </style>
 
-<style>
-/*.mapouter{
-    position:relative;
-    text-align:right;
-    height:500px;
-    width:600px;
-    }*/</style>
+
 
 
 {% endblock %}

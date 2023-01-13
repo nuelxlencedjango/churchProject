@@ -783,38 +783,7 @@ iframe{
 }
 
 }
-@media screen and (max-width: 600px) {
-    .slide {
-        height: auto;
-    }
-    .slide .motivation {
-        margin-left: 0px;
-    }
-    .no-js .owl-carousel, .owl-carousel.owl-loaded {
-        display: block;
-    }
-    .owl-carousel .owl-stage-outer {
-        position: relative;
-        overflow: hidden;
-        -webkit-transform: translate3d(0,0,0);
-    }
-    element.style{
-    transform: translate3d(-1833px, 0px, 0px);
-    transition: all 0s ease 0s;
-    width: 7332px;
-    
-}
-.owl-item .cloned{
-    width: 601px;
-    margin-right: 10px;
-}
-.slide .motivation .item {
-    margin: 5px;
-}
-.slide .motivation .item .col-md-6 {
-    width: 100%;
-}
-}
+
 @media screen and (max-width: 600px) {
     .information .container h3 {
         text-transform: uppercase;
