@@ -1,8 +1,8 @@
 
 {% extends 'layout/base.html' %}
-{% load static%}
-{% block content %} 
 
+{% block content %} 
+{% load static %}
 {% load crispy_forms_tags %}
 
 
@@ -11,7 +11,7 @@
 
     <div class="e-commerce">
         <video autoplay loop muted plays-inline class="backgroundVideo">
-            <source src="/static/video/atmosphere.mp4">
+            <source src="{% static 'video/atmosphere.mp4' %}">
         </video>
         {% include 'layout/navigation.html' %}
       
