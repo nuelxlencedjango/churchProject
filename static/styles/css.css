@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
+    /*transition: step-end;*/
 }
 
 .e-church{
@@ -687,7 +688,7 @@ iframe{
 @media screen and (max-width: 770px) {
     .e-church{
         width: 100%;
-        height: 300px;
+        height: 400px;
        
     }
     .churchMessage {
@@ -803,6 +804,11 @@ iframe {
 }
 }
 @media screen and (max-width: 700px) {
+    .e-church{
+        width: 100%;
+        height: 350px;
+       
+    }
     .slide .motivation {
         margin-left: 50px;
     }
@@ -842,6 +848,11 @@ iframe {
 }
 }
 @media screen and (max-width: 660px) {
+    .e-church{
+        width: 100%;
+        height: 330px;
+       
+    }
     .connections ul {
         padding-left: 5px;
     }
@@ -863,6 +874,11 @@ iframe {
 }
 
 @media screen and (max-width: 600px) {
+    .e-church{
+        width: 100%;
+        height: 310px !important;
+       
+    }
     .information .container h3 {
         text-transform: uppercase;
         font-size: 10px;
@@ -931,28 +947,33 @@ iframe {
     font-size: 13px;
    
 }
+.connections ul li a {
+    color: #fff;
+    text-align: center;
+    margin: 0px;
+    font-size: 14px;
 }
+}
+@media screen and (max-width: 550px) {
+    .e-church{
+        width: 100%;
+        height: 280px !important;
+       
+    }
+  
+   
+} 
+  
 @media screen and (max-width: 480px) {
+    .e-church{
+        width: 100%;
+        height: 250px !important;
+       
+    }
     .connections ul {
         padding-left:0px;
     }
-    .connections ul li {
-        list-style: none;
-        width: 90px;
-        height: 40px;
-
-        /* border: 2px solid white; */
-    }
-
-    .connections ul li a {
-    color: #fff;
-    text-align: center;
-    margin: 6px;
-    font-size: 12px;
   
-   
-   
-}
 footer .container .row .col-lg-6 {
     margin: 10px;
     width: 100%;
@@ -969,14 +990,36 @@ footer .container .row .col-lg-6 {
 .churchInfo .location {
     margin-left: 5px;
 }
-}
 
+}
+@media screen and (max-width: 480px) {
+    .e-church{
+        width: 100%;
+        height: 230px !important;
+       
+    }
+}
+@media screen and (max-width: 450px) {
+    .connections ul li {
+        list-style: none;
+        width: 80px;
+        height: 40px;
+        /* border: 2px solid white; */
+    }
+    .connections ul li a {
+        color: #fff;
+        text-align: center;
+        margin: 0px;
+        font-size: 13px;
+    }
+}
 @media screen and (max-width: 400px) {
     .e-church{
         width: 100%;
-        height: 150px;
+        height: 200px !important;
        
     }
+    
     footer .container .row .col-lg-6 {
         margin: 10px;
         width: 100%;
@@ -994,10 +1037,21 @@ footer .container .row .col-lg-6 {
         margin-left: 5px;
     }
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 360px) {
+    
+  
+}
+@media screen and (max-width: 350px) {
     .e-church{
         width: 100%;
-        height: 100px;
+        height: 180px !important;
+       
+    }
+}
+@media screen and (max-width: 318px) {
+    .e-church{
+        width: 100%;
+        height: 150px !important;
        
     }
 }
