@@ -953,6 +953,22 @@ iframe {
    
    
 }
+footer .container .row .col-lg-6 {
+    margin: 10px;
+    width: 100%;
+}
+.brand-name h4 {
+    color: hsl(213, 91%, 36%);
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+}
+.churchInfo label {
+    margin-left: 5px;
+}
+.churchInfo .location {
+    margin-left: 5px;
+}
 }
 
 @media screen and (max-width: 400px) {
