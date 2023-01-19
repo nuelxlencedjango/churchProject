@@ -114,10 +114,32 @@
       loop:true,
       margin:10,
       responsiveClass:true,
-      responsive:{
+
+
+           //loop:true, 
+            // margin:10, 
+            // responsiveClass:true, 
+             responsive:{
+                 0:{
+                     items:1, 
+                    }, 
+                 600:{ 
+                    items:2
+                 }, 
+                 1000:{
+                     items:2, } }
+      /*responsive:{
         599:{
               items:2,
-              nav:true
+              nav:true,
+              //nav:false, 
+              loop:true,
+              loop:true, 
+          dots:true, 
+          autoplay:true, 
+          pagination:false, 
+          navigation:false, 
+          responsiveClass:true,
           },
           680:{
               items:2,
@@ -132,7 +154,7 @@
               nav:true,
               loop:false
           }
-      }
+      }*/
   })
 
   
@@ -140,7 +162,7 @@
 <style>
     @media screen and (max-width: 599px) {
         .slide .motivation {
-    margin-left: 10px;
+    margin-left: 2px;
      }
        /* .owl-stage{
             width: 100% !important;
@@ -160,6 +182,8 @@
 }*/
        
     }
+
+    
 
     </style>
 
