@@ -121,7 +121,7 @@ nav ul li:hover{
 .churchMessage{
     transition: all 3s ease-in;
     background-color: hsl(213, 91%, 36%);
-    height: 100vh;
+    height: 80vh;
 }
 .churchMessage .information .container{ 
     width: auto;
@@ -394,7 +394,7 @@ footer .image-body img{
 }
 .contact h3{
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
     color: hsl(213, 91%, 36%);
     font-weight: 700;
@@ -402,18 +402,21 @@ footer .image-body img{
 .contact{
     margin-top: 50px;
 }
-
-ul li{
+.contact ul{
+    padding-left: 5px
+}
+.contact ul li{
     list-style: none;
 }
-ul li a{
-    font-size: 22px;
+.contact ul li a{
+    font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
     color: #000;
     border-bottom: hsl(213, 91%, 36%);
+    text-decoration: underline;
 }
 .info-right{
     margin-top: 30px;
@@ -472,6 +475,7 @@ iframe{
         height: 500px;
     }
     .churchMessage {
+        width: 100%;
         height: 500px;
     }
     .churchMessage .information .container {
@@ -481,21 +485,28 @@ iframe{
     }
     .churchInfo {
         transition: all 3s ease-in;
+        width: 100%;
         height: 500px;
         z-index: -1 !important;
     }
     .churchInfo label {
      
-        margin-left: 5px;
+        margin-left: 35px;
         font-size: 17px;
        
+    }
+    .churchInfo .container .row{
+        width: 100%;
+    }
+    .churchInfo .container .row .col-sm-6{
+        width: 50%;
     }
     .address h3 {
       
         font-size: 18px;
     }
     .container, .container-sm {
-        max-width: 540px;
+        max-width: 100%;
         margin-left: 20px;
     }
     
@@ -507,7 +518,7 @@ iframe{
     }
     iframe{
         margin-top: 10px;
-        width: 550px;
+        width: 100%;
         height: 400px;
        
     }
@@ -557,6 +568,27 @@ iframe{
 .owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
     display: block;
 }
+.contact h3{
+    color: hsl(213, 91%, 36%);
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+}
+.contact ul{
+    padding-left: 5px;
+}
+.contact ul li a {
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    border-bottom: hsl(213, 91%, 36%);
+    text-decoration: revert;
+}
+
+
 }
 
 @media screen and (max-width: 870px) {
@@ -586,7 +618,7 @@ iframe{
     }
     iframe{
         margin-top: 10px;
-        width: 400px;
+        width: 100%;
         height: 350px;
        
     }
@@ -633,8 +665,25 @@ iframe{
         top: 0px;
         margin-left: 50px;
     }
-    
+    .address h3 {
+        margin-top: 20px;
+        margin-left: 10px;
+        font-size:18px;
+    }
+    .direction {
+        margin-left: 10px;
+        margin-top: 50px;
+        width: 140px;
+        border-bottom: 2px solid #fff;
+        /* border: 2px solid rebeccapurple; */
+    }
+    .service {
+        margin-top: 50px;
+        margin-left: 10px;
+    } 
 }
+
+
 @media screen and (max-width: 770px) {
     .e-church{
         width: 100%;
@@ -647,7 +696,7 @@ iframe{
     .address h3 {
       
         font-size: 18px;
-        text-align: center;
+        text-align: left;
     }
     .information .container .text {
         margin: 10;
@@ -666,7 +715,7 @@ iframe{
    
     .churchInfo .container{
   
-    margin: 20px;
+    margin: 10px;
 }
 .churchInfo .container .row {
     --bs-gutter-x: 1.5rem;
@@ -683,12 +732,14 @@ iframe{
    
         flex-shrink: 0;
         width: 100%;
-     
+        /*overflow: scroll;*/
+        overflow: overlay;
         margin-top: var(--bs-gutter-y);
+
     
 }
 .churchInfo label {
-    margin-left: 150px;
+    margin-left: 100px;
     text-align: center;
 }
 .churchInfo .location{
@@ -699,7 +750,12 @@ iframe{
     position: relative;
     text-align: right;
     width: 100%;
-    margin-left: 50px;
+    margin-left: 0px;
+}
+iframe {
+    margin-top: 10px;
+    width: 100%;
+    height: 300px;
 }
 .slide {
     height: auto;
@@ -729,7 +785,22 @@ iframe{
     flex-wrap: wrap;
     padding: 10px;
 }
-
+.information .container .text{
+    margin: 5px;
+}
+.information .container .text h2 {
+ 
+    margin-top: 30px;
+    color: #fff;
+    font-size: 18px;
+    flex-wrap: wrap;
+}
+.col-md-6 h6{
+    margin: 15px;
+}
+.col-md-6 p{
+    margin: 10px;
+}
 }
 @media screen and (max-width: 700px) {
     .slide .motivation {
@@ -761,6 +832,13 @@ iframe{
     margin: 5px;
     font-size: 16px;
    
+}
+.churchInfo label {
+    margin-left: 75px;
+    text-align: center;
+}
+.churchInfo .location {
+    margin-left: 70px;
 }
 }
 @media screen and (max-width: 660px) {
@@ -882,6 +960,22 @@ iframe{
         width: 100%;
         height: 150px;
        
+    }
+    footer .container .row .col-lg-6 {
+        margin: 10px;
+        width: 100%;
+    }
+    .brand-name h4 {
+        color: hsl(213, 91%, 36%);
+        font-size: 18px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 700;
+    }
+    .churchInfo label {
+        margin-left: 5px;
+    }
+    .churchInfo .location {
+        margin-left: 5px;
     }
 }
 @media screen and (max-width: 300px) {
