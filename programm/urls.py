@@ -9,7 +9,7 @@ from . import views
 app_name = 'programm'
 urlpatterns =[
     path('',views.index, name='login'),
-    #path('register/',views.registration, name='register_page'),
+    path('giving/',views.donation, name='giving'),
  
 ]
 

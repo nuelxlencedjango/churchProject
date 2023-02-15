@@ -1,0 +1,446 @@
+
+{% extends 'layout/base.html' %}
+
+{% block content %} 
+
+{% load crispy_forms_tags %}
+{% load static %}
+
+<style>
+    .offering ul{
+       /* display: flex;
+      
+       justify-content: flex-end;
+      
+       position: fixed;*/
+
+position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  transition: .3s ease-in-out;
+  display: flex;
+  justify-content: flex-end;
+        
+    }
+    .offering ul li{
+        list-style: none;
+       
+        margin-right: 50px;
+    }
+    .offering ul li:hover{
+        text-decoration: underline;
+        color:hsl(213, 91%, 36%)
+    }
+    .offering ul li a{
+        color: white;
+        text-decoration: none;
+        text-transform: capitalize;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20px;
+    }
+    .offeringDetails .heading h3{
+        margin: 30px;
+        text-align: center;
+        font-size: 28px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .offeringDetails .text p{
+        text-align: left;
+        margin-left: 150px;
+        margin-right: 150px;
+        font-family:   Arial, sans-serif;
+        transition: .5s ease-in-out;
+    }   
+.offeringDetails .button{
+   margin-left: 150px;
+   margin-right: 100px;
+   text-transform: capitalize;
+}
+.sectional_question ul li{
+    list-style: none;
+
+}
+.question{
+    margin: 100px;
+}
+.fq h1{
+    margin-left: 150px;
+   margin-right: 100px;
+   margin-bottom: 50px;
+   text-transform: capitalize;
+   font-size: 28px;
+   padding-top: 50px;
+   
+   color: white;
+}
+.sectional_question{
+    margin: 20px;
+}
+.secondQuestion{
+    display: none;
+}
+.qst{
+    background: hsl(213, 91%, 36%);
+}
+.sectional_question li{
+    margin: 20px;
+    transition: .5s ease-in-out;
+}
+.sectional_question li h5{
+    color: #fff;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+hr{
+    color: #fff;
+    font-weight: 700;
+}
+.question p{
+    color:  hsl(0, 6%, 84%);
+    font-size: 15px;
+   
+}
+li h5 i{
+    width: 20px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 50%;
+  
+    border: none;
+    color: hsl(213, 91%, 36%);
+    cursor: pointer;
+    margin: 5px;
+    color: #fff;
+    margin-bottom:10px ;  
+}
+.giving2{
+    transition: .3s ease-in-out;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 150px;
+}
+.giving2 h3{
+    font-family: 'Times New Roman', Times, serif;
+    transition: .5s ease-in;
+    margin-bottom: 70px;
+
+}
+.lookat p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: .5s ease-out;
+}
+.ministries{
+    background:whitesmoke
+}
+.oursupport{
+    transition: all .5s ease-in;
+    margin: 150px;
+}
+.oursupport h3{
+    text-transform: capitalize;
+    font-size: 30px;
+    color: #000;
+    padding-top: 50px;
+}
+.oursupport ul{
+    padding-bottom: 50px;
+}
+.oursupport ul li{
+    list-style: none;
+    margin: 10px;
+  
+    font-size: 18px;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.oursupport ul li a{
+    color: hsl(213, 91%, 36%)
+}
+</style>
+
+<div class="offering">
+    <div class="given">
+        <div class="donation">
+            <ul>
+                <li><a href="">sermons</a></li>
+                <li><a href="">giving</a></li>
+                <li><a href="">events</a></li>
+                <li> <i class="nav-icon fas fa-bars"></i></li>
+               
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="offeringDetails">
+    <div class="heading">
+        <h3>Selfless people fill our seats every week</h3>
+    </div>
+    <div class="text">
+        <p>We think it’s possible for Christians to be the most generous people there are. We’ve been blessed as a church to always reach beyond ourselves and serve our city and this world because we have generous people. We’ve seen God do extraordinary things in people’s finances when they put God first in their tithes. We dare you to be a generous, selfless contributor and watch God do the extraordinary.“One gives freely, yet grows all the richer; another withholds what he should give, and only suffers want. Whoever brings blessing will be enriched, and one who waters will himself be watered.” Proverbs 11:24-25</p>
+    </div>
+    <div class="button">
+        <a href="" class="btn btn-danger">make donations</a>
+    </div>
+</div>
+
+
+<div class="qst" >
+    <div class="question">
+        <div class="fq">
+            <h1>Frequently Asked Questions</h1>
+        </div>
+       <div class="sectional_question">
+       <ul>
+        <li>
+            <h5>What if I don’t have the faith or desire to give a full 10% of my income? Am I in sin? <i class="fa fa-plus-circle" aria-hidden="true"></i> </h5>
+            <div class="moreInfo">
+                <p>This is a *heart issue*, and ultimately between you and the Lord.</p>
+                <p>This is a *heart issue*, and ultimately between you and the Lord.</p>
+                <p>This is a *heart issue*, and ultimately between you and the Lord.</p>
+                <p>This is a *heart issue*, and ultimately between you and the Lord.</p>
+                <p>‍ I can understand someone who is struggling to pay bills, or brand new in their walk with the Lord, taking a while to wrap their mind and heart around the biblical standards of giving. I think God looks at each person's journey, maturity, obedience, and heart motivations.</p>
+                <p>So, with that said, only the Lord could say who is sinning and who is simply growing in their giving.</p>
+            </div>
+
+        </li>
+         <hr>
+         <li>
+            <h5> I’ve heard it said that… if I don’t tithe, I’m robbing God and under a curse. Does God actually curse non-tithers? <i class="fa fa-plus-circle" aria-hidden="true"></i> <!--<button id="plus" onclick="openFunc()">&#43;</button>--> </h5>
+            <div class="secondQuestion" id="secondQuestion">
+                <p>This is where my answer will vary from some of the “hardline tithing preachers”. So, here it is: Technically, no, God does not curse New Testament believers. *Yet, in principle, it does happen…* but it's a matter of semantics.</p>
+                <p>*Let me explain*. *The curse* in the New Testament could be explained and experienced as *a lack or absence of blessing*. The net results may appear the same.</p>
+                <p>1 Corinthians tells us that if we “sow sparingly we will reap sparingly”.Proverbs tells us that “the world of the stingy gets smaller and smaller”.</p>
+                <p>So, whether we call it *a curse* OR *absence of blessing*, *the results are not good*.</p>
+            </div>
+      
+        </li>
+         <hr>
+         <li>
+            <h5>What if I don’t have the faith or desire to give a full 10% of my income? Am I in sin?  <i class="fa fa-plus-circle" aria-hidden="true"></i> </h5>
+             <div class="thirdQuestion">
+                <p>You should respect and honor your husband.  He is the head of the household and will give an account before God. I would recommend letting him know that you'd like to tithe and honor God according to scripture, butt hat you will submit to his decision. *God will work in his heart if you will honor and respect his leadership*, and perhaps you can give from your personal income or however God increases you personally.</p>
+                <p>Where do I send my tithe? Does it all go to my local church or can I divide it up as I please (i.e. charitable organizations, my son's Christian school tuition, my brother-in- law's missions trip)</p>
+             </div>
+         </li>
+         <hr>
+         <li>
+            <h5>What if I don’t have the faith or desire to give a full 10% of my income? Am I in sin? <i class="fa fa-plus-circle" aria-hidden="true"></i></h5>
+           <div class="fourthQuestion">
+            <p>The Bible tells us to “bring all the tithe *into the storehouse*”.This means *the local church* or place where you are being spiritually fed.</p>
+            <p>If you do not have a local church, then *I strongly recommend everyone get planted in a healthy local church,* bring the tithe to that storehouse, and give beyond that amount in offerings as the Lord leads you</p>
+           </div>
+
+         </li>
+         <hr>
+         <li>
+            <h5>What if I don’t have the faith or desire to give a full 10% of my income? Am I in sin? <i class="fa fa-plus-circle" aria-hidden="true"></i>  </h5>
+            <div class="fifthQuestion">
+                <p>Of course not! God wants to bless the poor under the same promises that He wants to bless the middle class and the rich</p>
+                <p>While it is wrong to put pressure on people to give, it would be cruel to not challenge people to trust God with their giving so they can see things turn around in their life.</p>
+                <p>*In other words*, if these promises and principles don't work for the poor,they don’t work for anyone! God said to “test me in this”, and He alwayspasses the test</p>
+            </div>
+            </li>
+         <hr>
+         <li>
+            <h5>What if I tithe 3% or 5%? Is that okay with the Lord? <i class="fa fa-plus-circle" aria-hidden="true"></i> </h5>
+            <div class="sixQuestion">
+            <p>Giving other than 10% would not be a ‘tithe’, as tithe literally means 10%, but I understand the question</p>
+            <p>I think *everyone should start where their faith is* and move up from there.So, if you can, in faith, commit to giving 3% of your income this year with hopes of moving it up to 5% next year, I think God will take you up on that.</p>
+            <p>At the same time, I don’t think mature believers who are living under the blessing of God should stop at 10%.</p>
+            <p>Remember this is not a legal requirement but *a starting point* for Biblical generosity.</p>
+            <p>I do not think God would condemn anyone who is attempting to bring a consistent percentage of their finances, *but I would encourage you to examine your heart, be honest before the Lord, and do your best to increase your giving as God prospers you.*</p>
+            <p>So, for those who are just getting started and not sure you can step out and fully tithe, here are some suggested starting blocks for you:
+                Start where your faith is…
+                Start with a percentage…
+                Be consistent in your giving as an act of worship…
+                Increase that percentage as your faith grows</p>
+            </div>    
+         </li>
+         <hr>
+         <li>
+            <h5>I know plenty of “Christians” who do not tithe, yet their financial life seems to be going well and their life does not line up with the principles that you're trying to convince people of. How do you justify this? <i class="fa fa-plus-circle" aria-hidden="true"></i> </h5>
+            <div class="seventhQuestion">
+                <p>That’s a great question and my answer is that we won't really be able to say who lived a blessed life until it’s all over.</p>
+                <p>Just because a non-tithing Christian has a great income and plenty of stuff, does not necessarily mean they're under the blessing of God; *it just means they have stuff.*</p>
+                <p>The real blessing in the life of a giver is often seen in the intangibles and not-so-obvious categories, like peace of mind, health, marital relations, relationships with friends and family, living with a sense of purpose and fulfillment, knowing your life is pleasing to the Lord, influence, and leaving a legacy.</p>
+                <p>Thus, *this journey of stewardship is really about faith*, and trusting God that the best version of our life is realized as we trust Him through giving tithes and offerings. But only heaven will reveal the final results.
+                    Jared Ayres</p>
+            </div>
+         </li>
+       </ul>
+        
+       </div>
+    </div>
+</div>
+
+
+
+<div class="moreinformation">
+    <div class="giving2">
+        <h3>Maybe you’re new to giving, or you have had a hard time managing money?</h3>
+        <div class="lookat">
+            <p>
+                A text can be any example of written or spoken language, from something as complex as a book or legal document to something as simple as the body of an email or the words on the back of a cereal box. In the humanities, different fields of study concern themselves with different forms of texts</p>
+        </div>
+        <div class="container">
+            <a href="" class="btn btn-danger">Resources</a>
+        </div>
+    </div>
+    <div class="ministries">
+        <div class="oursupport">
+            <h3>our ministries</h3>
+            <ul>
+                <li><a href="">Still Creek boys and girls homes</a></li>
+                <li><a href="">SOS Ministries</a></li>
+                <li><a href="">Hope Pregnancy Center</a></li>
+                <li><a href="">Church Food Pantry</a></li>
+                <li><a href="">Aggieland Pregnancy</a></li>
+                <li><a href="">Team Church</a></li>
+                <li><a href="">Leading Second</a></li>
+                <li><a href="">Hunger Relief International (Haiti Orphanage)</a></li>
+                <li><a href="">Peru (Grace House - rescuing those from human trafficking)</a></li>
+                <li><a href="">VOOM Foundation</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+  <style>
+    .navbar {
+ 
+}
+/*
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.navbar a:hover {
+  background-color: #555;
+}
+*/
+  </style>
+
+<style>
+
+
+/*
+    .fa:before {
+  content: "\f067"; 
+}
+
+.fa.open:before {
+  content: "\f068"; 
+}
+.sectional_question li .moreInfo {
+  display: none;
+}
+
+.sectional_question li.open .moreInfo {
+  display: block;
+}
+.thirdQuestion{
+    display: none;
+}
+*/
+
+.qst li .moreInfo,
+.qst li .secondQuestion,
+.qst li .thirdQuestion,
+.qst li .fourthQuestion,
+.qst li .fifthQuestion,
+.qst li .sixQuestion,
+.qst li .seventhQuestion {
+  display: none;
+}
+
+.qst li.active .moreInfo,
+.qst li.active .secondQuestion,
+.qst li.active .thirdQuestion,
+.qst li.active .fourthQuestion,
+.qst li.active .fifthQuestion,
+.qst li.active .sixQuestion,
+.qst li.active .seventhQuestion  {
+  display: block;
+}
+
+</style>
+
+
+{% include 'footer/footer.html' %}
+
+
+<script>
+   /* const button = document.getElementById('toggle-button');
+const icon = button.querySelector('i');
+
+
+button.addEventListener('click', function() {
+  icon.classList.toggle('open');
+});
+
+
+    const toggleButtons = document.querySelectorAll('.sectional_question li i');
+    toggleButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const li = button.parentNode.parentNode;
+        li.classList.toggle('open');
+      });
+    });
+
+
+    const toggleThird = document.querySelectorAll('.thirdQuestion li i');
+    toggleThird.forEach(but3 => {
+      but3.addEventListener('click', () => {
+        const li3 = but3.parentNode.parentNode;
+        li3.classList.toggle('open');
+      });
+    });   
+
+    let btnPlus = document.getElementById('plus');
+    let listOpen = document.getElementById('secondQuestion');
+
+    let value =true;
+    let openFunc =function(){
+        if(value === true){
+            listOpen.style.display = 'block';
+            value =false;
+        }
+        else{
+            listOpen.style.display = 'none';
+            value =true;
+        }
+    }*/
+ 
+    const questionHeaders = document.querySelectorAll('.qst li h5');
+
+questionHeaders.forEach(header => {
+  header.addEventListener('click', () => {
+    header.parentElement.classList.toggle('active');
+  });
+});
+
+  </script>
+{% endblock %}

@@ -9,4 +9,8 @@ def index(request):
     obj = Motivation.objects.all()
     context={'obj':obj}
     return render(request, 'general/home.html',context)
+
+
+def donation(request):
+    return render(request, 'general/offering.html')
    

@@ -1055,3 +1055,11 @@ footer .container .row .col-lg-6 {
        
     }
 }
+
+.offering{
+    background-image: url('/static/images/church_pics/dove1.jpg');
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
