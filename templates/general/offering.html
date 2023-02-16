@@ -7,176 +7,10 @@
 {% load static %}
 
 <style>
-    .offering ul{
-       /* display: flex;
-      
-       justify-content: flex-end;
-      
-       position: fixed;*/
-
-position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  transition: .3s ease-in-out;
-  display: flex;
-  justify-content: flex-end;
-        
-    }
-    .offering ul li{
-        list-style: none;
-       
-        margin-right: 50px;
-    }
-    .offering ul li:hover{
-        text-decoration: underline;
-        color:hsl(213, 91%, 36%)
-    }
-    .offering ul li a{
-        color: white;
-        text-decoration: none;
-        text-transform: capitalize;
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 20px;
-    }
-    .offeringDetails .heading h3{
-        margin: 30px;
-        text-align: center;
-        font-size: 28px;
-        font-family: 'Times New Roman', Times, serif;
-    }
-    .offeringDetails .text p{
-        text-align: left;
-        margin-left: 150px;
-        margin-right: 150px;
-        font-family:   Arial, sans-serif;
-        transition: .5s ease-in-out;
-    }   
-.offeringDetails .button{
-   margin-left: 150px;
-   margin-right: 100px;
-   text-transform: capitalize;
-}
-.sectional_question ul li{
-    list-style: none;
-
-}
-.question{
-    margin: 100px;
-}
-.fq h1{
-    margin-left: 150px;
-   margin-right: 100px;
-   margin-bottom: 50px;
-   text-transform: capitalize;
-   font-size: 28px;
-   padding-top: 50px;
-   
-   color: white;
-}
-.sectional_question{
-    margin: 20px;
-}
-.secondQuestion{
-    display: none;
-}
-.qst{
-    background: hsl(213, 91%, 36%);
-}
-.sectional_question li{
-    margin: 20px;
-    transition: .5s ease-in-out;
-}
-.sectional_question li h5{
-    color: #fff;
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-
-}
-hr{
-    color: #fff;
-    font-weight: 700;
-}
-.question p{
-    color:  hsl(0, 6%, 84%);
-    font-size: 15px;
-   
-}
-li h5 i{
-    width: 20px;
-    height: 50px;
-    font-size: 30px;
-    border-radius: 50%;
   
-    border: none;
-    color: hsl(213, 91%, 36%);
-    cursor: pointer;
-    margin: 5px;
-    color: #fff;
-    margin-bottom:10px ;  
-}
-.giving2{
-    transition: .3s ease-in-out;
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-bottom: 150px;
-}
-.giving2 h3{
-    font-family: 'Times New Roman', Times, serif;
-    transition: .5s ease-in;
-    margin-bottom: 70px;
-
-}
-.lookat p{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    transition: .5s ease-out;
-}
-.ministries{
-    background:whitesmoke
-}
-.oursupport{
-    transition: all .5s ease-in;
-    margin: 150px;
-}
-.oursupport h3{
-    text-transform: capitalize;
-    font-size: 30px;
-    color: #000;
-    padding-top: 50px;
-}
-.oursupport ul{
-    padding-bottom: 50px;
-}
-.oursupport ul li{
-    list-style: none;
-    margin: 10px;
-  
-    font-size: 18px;
-    text-transform: capitalize;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
-}
-.oursupport ul li a{
-    color: hsl(213, 91%, 36%)
-}
 </style>
 
-<div class="offering">
-    <div class="given">
-        <div class="donation">
-            <ul>
-                <li><a href="">sermons</a></li>
-                <li><a href="">giving</a></li>
-                <li><a href="">events</a></li>
-                <li> <i class="nav-icon fas fa-bars"></i></li>
-               
-            </ul>
-        </div>
-    </div>
-</div>
+{% include 'layout/navbar.html' %}
 
 <div class="offeringDetails">
     <div class="heading">
@@ -186,7 +20,7 @@ li h5 i{
         <p>We think it’s possible for Christians to be the most generous people there are. We’ve been blessed as a church to always reach beyond ourselves and serve our city and this world because we have generous people. We’ve seen God do extraordinary things in people’s finances when they put God first in their tithes. We dare you to be a generous, selfless contributor and watch God do the extraordinary.“One gives freely, yet grows all the richer; another withholds what he should give, and only suffers want. Whoever brings blessing will be enriched, and one who waters will himself be watered.” Proverbs 11:24-25</p>
     </div>
     <div class="button">
-        <a href="" class="btn btn-danger">make donations</a>
+        <a href="{% url 'programm:transact' %}" class="btn btn-danger">make donations</a>
     </div>
 </div>
 
@@ -315,124 +149,13 @@ li h5 i{
 
 
 
-  <style>
-    .navbar {
- 
-}
-/*
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  padding: 5px;
-}
-
-.navbar a:hover {
-  background-color: #555;
-}
-*/
-  </style>
-
-<style>
-
-
-/*
-    .fa:before {
-  content: "\f067"; 
-}
-
-.fa.open:before {
-  content: "\f068"; 
-}
-.sectional_question li .moreInfo {
-  display: none;
-}
-
-.sectional_question li.open .moreInfo {
-  display: block;
-}
-.thirdQuestion{
-    display: none;
-}
-*/
-
-.qst li .moreInfo,
-.qst li .secondQuestion,
-.qst li .thirdQuestion,
-.qst li .fourthQuestion,
-.qst li .fifthQuestion,
-.qst li .sixQuestion,
-.qst li .seventhQuestion {
-  display: none;
-}
-
-.qst li.active .moreInfo,
-.qst li.active .secondQuestion,
-.qst li.active .thirdQuestion,
-.qst li.active .fourthQuestion,
-.qst li.active .fifthQuestion,
-.qst li.active .sixQuestion,
-.qst li.active .seventhQuestion  {
-  display: block;
-}
-
-</style>
 
 
 {% include 'footer/footer.html' %}
 
 
 <script>
-   /* const button = document.getElementById('toggle-button');
-const icon = button.querySelector('i');
-
-
-button.addEventListener('click', function() {
-  icon.classList.toggle('open');
-});
-
-
-    const toggleButtons = document.querySelectorAll('.sectional_question li i');
-    toggleButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const li = button.parentNode.parentNode;
-        li.classList.toggle('open');
-      });
-    });
-
-
-    const toggleThird = document.querySelectorAll('.thirdQuestion li i');
-    toggleThird.forEach(but3 => {
-      but3.addEventListener('click', () => {
-        const li3 = but3.parentNode.parentNode;
-        li3.classList.toggle('open');
-      });
-    });   
-
-    let btnPlus = document.getElementById('plus');
-    let listOpen = document.getElementById('secondQuestion');
-
-    let value =true;
-    let openFunc =function(){
-        if(value === true){
-            listOpen.style.display = 'block';
-            value =false;
-        }
-        else{
-            listOpen.style.display = 'none';
-            value =true;
-        }
-    }*/
+ 
  
     const questionHeaders = document.querySelectorAll('.qst li h5');
 

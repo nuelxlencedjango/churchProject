@@ -470,6 +470,240 @@ iframe{
    
  /*end map*/   
 
+
+.offering{
+    background-image: url('/static/images/church_pics/dove1.jpg');
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-position: center center;
+    margin-top: 50px;
+
+ 
+}
+
+
+/*giving page css*/
+
+.offering ul{
+    /* display: flex;
+   
+    justify-content: flex-end;*/
+   
+
+position: fixed;
+top: 0;
+right: 0;
+width: 100%;
+background-color: #333;
+color: #fff;
+padding: 10px;
+transition: .3s ease-in-out;
+display: flex;
+justify-content: flex-end;
+     
+ }
+ .offering ul li{
+     list-style: none;
+    
+     margin-right: 50px;
+ }
+ .offering ul li:hover{
+     text-decoration: underline;
+     color:hsl(213, 91%, 36%)
+ }
+ .offering ul li a{
+     color: white;
+     text-decoration: none;
+     text-transform: capitalize;
+     font-family: 'Times New Roman', Times, serif;
+     font-size: 20px;
+ }
+ .offeringDetails .heading h3{
+     margin: 30px;
+     text-align: center;
+     font-size: 28px;
+     font-family: 'Times New Roman', Times, serif;
+ }
+ .offeringDetails .text p{
+     text-align: left;
+     margin-left: 150px;
+     margin-right: 150px;
+     font-family:   Arial, sans-serif;
+     transition: .5s ease-in-out;
+ }   
+.offeringDetails .button{
+margin-left: 150px;
+margin-right: 100px;
+text-transform: capitalize;
+}
+.sectional_question ul li{
+ list-style: none;
+
+}
+.question{
+ margin: 100px;
+}
+.fq h1{
+ margin-left: 150px;
+margin-right: 100px;
+margin-bottom: 50px;
+text-transform: capitalize;
+font-size: 28px;
+padding-top: 50px;
+
+color: white;
+}
+.sectional_question{
+ margin: 20px;
+}
+.secondQuestion{
+ display: none;
+}
+.qst{
+ background: hsl(213, 91%, 36%);
+}
+.sectional_question li{
+ margin: 20px;
+ transition: .5s ease-in-out;
+}
+.sectional_question li h5{
+ color: #fff;
+ font-size: 18px;
+ font-family: Arial, Helvetica, sans-serif;
+
+}
+hr{
+ color: #fff;
+ font-weight: 700;
+}
+.question p{
+ color:  hsl(0, 6%, 84%);
+ font-size: 15px;
+
+}
+li h5 i{
+ width: 20px;
+ height: 50px;
+ font-size: 30px;
+ border-radius: 50%;
+
+ border: none;
+ color: hsl(213, 91%, 36%);
+ cursor: pointer;
+ margin: 5px;
+ color: #fff;
+ margin-bottom:10px ;  
+}
+.giving2{
+ transition: .3s ease-in-out;
+ margin-left: 150px;
+ margin-right: 150px;
+ margin-bottom: 150px;
+}
+.giving2 h3{
+ font-family: 'Times New Roman', Times, serif;
+ transition: .5s ease-in;
+ margin-bottom: 70px;
+
+}
+.lookat p{
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ transition: .5s ease-out;
+}
+.ministries{
+ background:whitesmoke
+}
+.oursupport{
+ transition: all .5s ease-in;
+ margin: 150px;
+}
+.oursupport h3{
+ text-transform: capitalize;
+ font-size: 30px;
+ color: #000;
+ padding-top: 50px;
+}
+.oursupport ul{
+ padding-bottom: 50px;
+}
+.oursupport ul li{
+ list-style: none;
+ margin: 10px;
+
+ font-size: 18px;
+ text-transform: capitalize;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ 
+}
+.oursupport ul li a{
+ color: hsl(213, 91%, 36%)
+}
+
+.qst li .moreInfo,
+.qst li .secondQuestion,
+.qst li .thirdQuestion,
+.qst li .fourthQuestion,
+.qst li .fifthQuestion,
+.qst li .sixQuestion,
+.qst li .seventhQuestion {
+  display: none;
+}
+
+.qst li.active .moreInfo,
+.qst li.active .secondQuestion,
+.qst li.active .thirdQuestion,
+.qst li.active .fourthQuestion,
+.qst li.active .fifthQuestion,
+.qst li.active .sixQuestion,
+.qst li.active .seventhQuestion  {
+  display: block;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #0c79e7;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    border-radius: 20px;
+}
+
+/*giving information page css*/
+.offering{
+    height: 350px;
+    background-size: cover;
+}
+select{
+    width: 500px;
+    border: 1px solid #0c79e7;
+    height: 35px;
+    border-radius: 20px;
+}
+.title-giving{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+form{
+    margin-bottom: 50px;
+}
+
+
+
 @media screen and (max-width: 990px) {
     .e-church{
         width: 100%;
@@ -588,10 +822,24 @@ iframe{
     border-bottom: hsl(213, 91%, 36%);
     text-decoration: revert;
 }
-
-
+select{
+    width: 400px;
+    
 }
 
+}
+@media screen and (max-width: 915px) {
+    select{
+        width: 350px;
+        
+    }
+}
+@media screen and (max-width: 800px) {
+    select{
+        width: 300px;
+        
+    }
+}
 @media screen and (max-width: 870px) {
     .e-church{
         width: 100%;
@@ -682,8 +930,28 @@ iframe{
         margin-top: 50px;
         margin-left: 10px;
     } 
-}
 
+    .offering{
+        margin-top: 30px;
+        background-position: center center;
+
+    }
+    .fq h1 {
+        margin-left: 50px;
+        margin-right: 70px;
+        margin-bottom: 50px;
+        text-transform: capitalize;
+        font-size: 22px;
+        padding-top: 50px;
+        color: white;
+    }
+}
+@media screen and (max-width: 700px) {
+    select{
+        width: 280px;
+        
+    }
+}
 
 @media screen and (max-width: 770px) {
     .e-church{
@@ -871,6 +1139,51 @@ iframe {
    
 }
 
+
+ .offeringDetails .heading h3{
+     margin: 20px;
+     text-align: center;
+     font-size: 28px;
+     font-family: 'Times New Roman', Times, serif;
+ }
+ .offeringDetails .text p{
+     text-align: left;
+     margin-left: 70px;
+     margin-right: 70px;
+     font-family:   Arial, sans-serif;
+     transition: .5s ease-in-out;
+ }   
+.offeringDetails .button{
+margin-left: 70px;
+margin-right: 50px;
+text-transform: capitalize;
+}
+.sectional_question ul li{
+ list-style: none;
+
+}
+.question{
+ margin: 50px;
+}
+.fq h1{
+ margin-left: 40px;
+margin-right: 40px;
+margin-bottom: 50px;
+text-transform: capitalize;
+font-size: 28px;
+padding-top: 50px;
+
+color: white;
+}
+
+
+
+}
+@media screen and (max-width: 645px) {
+    select{
+        width: 260px;
+        
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -953,6 +1266,28 @@ iframe {
     margin: 0px;
     font-size: 14px;
 }
+.giving2 {
+    transition: .3s ease-in-out;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 150px;
+}
+.oursupport {
+    transition: all .5s ease-in;
+    margin: 30px;
+}
+.giving2 {
+    transition: .3s ease-in-out;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+}
+.col-md-6{
+    width: 100%;
+}
+#freq {
+    width: 100% !important;
+}
 }
 @media screen and (max-width: 550px) {
     .e-church{
@@ -960,7 +1295,38 @@ iframe {
         height: 280px !important;
        
     }
-  
+    .fq h1 {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 50px;
+        text-transform: capitalize;
+        font-size: 18px;
+        padding-top: 50px;
+        color: white;
+    }  
+    .sectional_question {
+        margin: 5px;
+    }
+    ol, ul {
+        padding-left: 0.3rem;
+    }
+    .sectional_question li {
+        margin: 5px;
+        transition: .5s ease-in-out;
+    }
+    .offeringDetails .heading h3 {
+        margin: 20px;
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .offeringDetails .text p {
+        text-align: left;
+        margin-left: 20px;
+        margin-right: 30px;
+        font-family: Arial, sans-serif;
+        transition: .5s ease-in-out;
+    }
    
 } 
   
@@ -990,6 +1356,31 @@ footer .container .row .col-lg-6 {
 .churchInfo .location {
     margin-left: 5px;
 }
+.giving2 {
+    transition: .3s ease-in-out;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 150px;
+}
+.question {
+    margin: 10px;
+}
+.offering ul li {
+    list-style: none;
+    margin-right: 20px;
+}
+
+.offering ul li {
+    list-style: none;
+    margin-right: 10px;
+}
+.offering ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+}
 
 }
 @media screen and (max-width: 480px) {
@@ -997,6 +1388,27 @@ footer .container .row .col-lg-6 {
         width: 100%;
         height: 230px !important;
        
+    }
+    .oursupport {
+        transition: all .5s ease-in;
+        margin: 10px;
+    }
+    .oursupport h3 {
+        text-transform: capitalize;
+        font-size: 20px;
+        color: #000;
+        padding-top: 50px;
+    }
+    .oursupport ul li {
+        list-style: none;
+        margin: 5px;
+        font-size: 18px;
+        text-transform: capitalize;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .oursupport ul li a {
+        color: hsl(213, 91%, 36%);
+        font-size: 15px;
     }
 }
 @media screen and (max-width: 450px) {
@@ -1056,10 +1468,8 @@ footer .container .row .col-lg-6 {
     }
 }
 
-.offering{
-    background-image: url('/static/images/church_pics/dove1.jpg');
-    height: 500px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-}
+@media only screen and (max-width: 600px) {
+    body {
+      background-size: contain;
+    }
+  }

@@ -1,0 +1,102 @@
+
+{% extends 'layout/base.html' %}
+
+{% block content %} 
+
+{% load crispy_forms_tags %}
+{% load widget_tweaks %}
+{% load static %}
+
+
+
+{% include 'layout/navbar.html' %}
+
+<style>
+
+</style>
+
+
+
+
+<div class="container">
+    <div class="content-wrapper">
+        {% if form.errors %}
+  <div class="alert alert-danger">
+      <strong> {{ form.errors }}</strong>
+    </div>
+    {% endif %}
+    <div class="card-header card-header-secondary">
+        <h4 class="title-giving">giviing</h4>
+    </div>
+<form enctype="multipart/form-data" class="container" method="post" id="product_form">
+    {% csrf_token %}
+    <!-- main form start --- in our case product form -->
+    <div class="cards">
+       <div class="row">
+        
+        <div class="form-group mb-4  col-md-6">
+            <label class="form-label">First Name</label>
+            {% render_field form.first_name|attr:'required:true' class="form-control" %}
+            
+        </div>
+        <div class="form-group mb-4  col-md-6">
+            <label class="form-label">Last Name </label>
+            {% render_field form.last_name|attr:'required:true' class="form-control" %}
+           
+        </div>
+        <div class="form-group mb-4  col-md-6">
+             <label class="form-label">Amount ($)</label>
+             {% render_field form.amount|attr:'required:true' class="form-control" %}
+           
+        </div>
+        <div class="form-group mb-4  col-md-6">
+            <label class="form-label">Title</label>
+            
+            <select name="title" id="freq">
+                <option value="Tithe">Tithe</option>
+                <option value="Offering">Offering</option>
+                <option value="Donation">Donation</option>
+            </select>
+          
+        </div>
+        <div class="form-group mb-4  col-md-6">
+           <label class="form-label">Frequency</label>
+           
+            <select name="title" id="freq">
+                <option value="One Time">One Time</option>
+                <option value="Regulary">Regulary</option>
+                <option value="Once In A While">Once In A While</option>
+            </select>
+            
+        </div>
+        <div class="form-group mb-4  col-md-6">
+            <label class="form-label">Email</label>
+            {% render_field form.email|attr:'required:true' class="form-control" %}
+           
+        </div>
+        <div class="form-group mb-4  col-md-6 ">
+            <label class="form-label">Phone Number</label>
+            {% render_field form.phone|attr:'required:true' class="form-control" %}
+           
+        </div>
+       
+
+        <div class="modal-footer">
+            <a href="" type="button" class="btn btn-danger">Continue</a>
+            
+          </div>
+
+       </div>
+      
+    </div>
+</form>
+    </div>
+</div>
+
+
+
+
+
+
+{% include 'footer/footer.html' %}      
+{% endblock %}
