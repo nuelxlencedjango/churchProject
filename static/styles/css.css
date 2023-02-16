@@ -701,7 +701,12 @@ select{
 form{
     margin-bottom: 50px;
 }
-
+.product_form{
+    transition: all .5s ease-in-out;
+}
+.col-md-6{
+    transition: all .5s ease-in-out;
+}
 
 
 @media screen and (max-width: 990px) {
