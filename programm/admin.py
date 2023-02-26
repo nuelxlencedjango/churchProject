@@ -4,3 +4,26 @@ from .models import *
 
 
 admin.site.register(Motivation)
+
+
+admin.site.register(DonationAndOffering)
+
+
+admin.site.register(ChurchPrograms)
+
+
+class ImageGalleryAdmin(admin.StackedInline):
+    model = ImageGallery
+
+
+@admin.register(ChurchGallery)
+class ChurchProgrammAdmin(admin.ModelAdmin):
+    inlines = [ImageGalleryAdmin]
+
+    class Meta:
+       model =ChurchGallery
+
+
+@admin.register(ImageGallery)
+class ImageGalleryAdmin(admin.ModelAdmin):
+    pass

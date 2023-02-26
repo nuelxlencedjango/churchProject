@@ -7,7 +7,20 @@
 {% load static %}
 
 <style>
-  
+    ul li h5 i{
+     
+        transition-timing-function: 5s ease-in-out;
+    }
+  .moreInfo{
+    transition: all 4s ease-in-out ;
+   
+    /*transition-timing-function: all 5s ease-in-out;
+   background: #2db34a;
+  transition-property: background;
+  transition-duration: .5s;
+  transition-timing-function: linear;*/
+  transition: background .5s linear, border-radius 1s ease-in 1s;
+  }
 </style>
 
 {% include 'layout/navbar.html' %}

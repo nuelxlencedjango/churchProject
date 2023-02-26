@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from uuid import uuid4
+from cloudinary.models import CloudinaryField
 # Create your models here.
 
 
@@ -41,3 +42,37 @@ class DonationAndOffering(models.Model):
 
 
 
+
+
+class ChurchPrograms(models.Model):
+    title = models.CharField(max_length=500,null=True,blank=True)
+    mesg= models.TextField(max_length=500,null=True,blank=True)
+    eventDate = models.DateTimeField(blank=True, null=True)
+    img = CloudinaryField(blank=True,null=True)
+    venue = models.CharField(max_length=500,null=True,blank=True)
+
+    def __str__(self):
+        return self.title
+    
+
+
+class ChurchGallery(models.Model):
+    title = models.CharField(max_length=500,null=True,blank=True)
+    eventDate = models.DateTimeField(blank=True, null=True)
+    img = CloudinaryField('pics',blank=True,null=True)
+
+    def __str__(self):
+        return self.title
+    
+
+
+
+class ImageGallery(models.Model):
+    eventImg = models.ForeignKey(ChurchGallery,on_delete=models.SET_NULL, null=True, blank=True, related_name="images_church")
+    img = CloudinaryField('images',blank=True,null=True)
+
+    def __str__(self):
+      return str(self.eventImg.title)
+
+    class Meta:
+      verbose_name_plural='Image Gallery'

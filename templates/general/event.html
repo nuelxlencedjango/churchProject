@@ -1,0 +1,46 @@
+
+{% extends 'layout/base.html' %}
+
+{% block content %} 
+
+{% load crispy_forms_tags %}
+{% load static %}
+{% include 'layout/navbar.html' %}
+<style>
+    .offering{
+        height: 0;
+        width: 100%;
+        margin-bottom: 100px;
+    }
+    .event{
+        margin-top: 50px;
+    }
+</style>
+
+
+
+<style>
+  
+</style>
+
+<body>
+	<div class="gallery">
+        {% for p in gallery %}
+		<div class="item">
+            <img src="{{p.img.url }}">
+        </div>
+        {% for i in p.images_church.all %}
+        <div class="item">
+            <img src="{{i.img.url }}">
+        </div>
+        {% endfor %}
+        {% endfor %}
+		
+	</div>
+
+    
+
+{% include 'footer/footer.html' %}
+
+{% endblock %}
+</html>

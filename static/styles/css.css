@@ -595,6 +595,7 @@ li h5 i{
  margin: 5px;
  color: #fff;
  margin-bottom:10px ;  
+ transition: all 5s ease-in-out;
 }
 .giving2{
  transition: .3s ease-in-out;
@@ -706,6 +707,43 @@ form{
 }
 .col-md-6{
     transition: all .5s ease-in-out;
+}
+.moreInfo, .secondQuestion, .thirdQuestion, .fourthQuestion, .fifthQuestion,.sixQuestion, .seventhQuestion{
+    transition: all 5s ease-in-out;
+}
+
+/*event image gallery page*/
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+}
+.gallery .item{
+    position: relative;
+    height: 270px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px lightgray;
+    cursor: pointer;
+    transition: .5s;
+    margin: 10px;
+    z-index: -1;
+}
+.gallery .item img {
+	width: 250px;
+	height: 250px;
+	margin: 10px;
+	object-fit: cover;
+	cursor: pointer;
+	transition: transform .3s;
+  
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.gallery img:hover {
+	transform: scale(1.1);
 }
 
 

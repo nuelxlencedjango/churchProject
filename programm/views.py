@@ -50,3 +50,10 @@ def transaction(request):
 def successfulTransaction(request):
     return render(request, 'general/success.html') 
 
+
+def churchEvent(request):
+    prog = ChurchPrograms.objects.all()
+    gallery = ChurchGallery.objects.all()
+    context ={'prog':prog,'gallery':gallery}
+    return render(request, 'general/event.html',context) 
+
