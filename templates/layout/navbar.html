@@ -8,12 +8,130 @@
                 <li><a href="{% url 'programm:transact' %}">giving</a></li>
                 <li><a href="{% url 'programm:church_event' %}">image gallery</a></li>
                 <li><a href="">events</a></li>
-                <li> <i class="nav-icon fas fa-bars"></i></li>
+                <li> <i class="nav-icon fas fa-bars" onclick="openFunction()"></i></li>
                
             </ul>
         </div>
     </div>
 </div>
+
+
+<style>
+.toggleNav{
+width: 100%;
+height: 400px;
+background-color: hsl(213, 91%, 36%);;
+transition: all .5s ease-in-out;
+display: none;
+
+}
+.toggleNav ul{
+    display: inline-flex;
+    margin-top: 30px;
+
+}
+.toggleNav ul li{
+    list-style: none;
+    transition: all .5s ease-in-out;
+}
+a{
+    text-decoration: none;
+}
+.nav-title{
+text-transform: uppercase;
+font-size: 20px;
+color: white;
+font-weight: 700;
+transition: all .5s ease-in-out;
+
+}
+a.menu-link{
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    opacity: .8;
+    transition: all .5s ease-in-out;
+
+}
+a.menu-link:hover{
+   color: black;
+   font-weight: 900;
+}
+.addditionInfo .container{
+
+}
+</style>
+<div class="toggleNav" id="toggleNav">
+    <div class="addditionInfo">
+        <div class="container">
+        <ul>
+           
+            <li>
+                <div class="col-1">
+                    <p class="nav-title">about</p>
+                    <a href="/templates/general/event.html" aria-current="page" class="menu-link w--current">Pastors</a>
+                    <a href="../general/church_event.html" class="menu-link">Our Story</a>
+                    <a href="/about/our-values" class="menu-link">Our Mission</a>
+                    <a href="/about/our-beliefs" class="menu-link">Beliefs</a>
+                    <a href="/about/resources" class="menu-link">Resources</a>
+                </div>
+            </li>
+
+            <li>
+                <div class="col-2">
+                    <p class="nav-title">connect</p>
+                    <a href="/about/pastors-2" aria-current="page" class="menu-link w--current">growth track</a>
+                    <a href="/about/our-story" class="menu-link">small groups</a>
+                    <a href="/about/our-values" class="menu-link">kids</a>
+                    <a href="/about/our-beliefs" class="menu-link">youths</a>
+                    <a href="/about/resources" class="menu-link">baptism</a>
+                    <a href="/about/resources" class="menu-link">jobs</a>
+                </div>
+            </li>
+
+            <li>
+                <div class="col-3">
+                    <p class="nav-title">watch</p>
+                    <a href="/about/pastors-2" aria-current="page" class="menu-link w--current">live</a>
+                    <a href="/about/our-story" class="menu-link">sermons</a>
+                    <a href="/about/our-values" class="menu-link">Our Mission</a>
+                    <a href="/about/our-beliefs" class="menu-link">podcasts</a>
+              
+                </div>
+            </li>
+
+            <li>
+                <div class="col-4">
+                    <p class="nav-title">contact</p>
+
+                    <a href="/about/our-story" class="menu-link">give</a>
+                    <a href="/about/our-values" class="menu-link">Our Mission</a>
+                    <a href="/about/our-beliefs" class="menu-link">events</a>
+                    
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+
+
+<script>
+let navLinks = document.getElementById('toggleNav');
+let displaySensor = false;
+
+let openFunction = function(){
+    
+if(displaySensor ===false){
+    navLinks.style.display ="block";
+    displaySensor =true;
+}
+else{
+    navLinks.style.display ="none";
+    displaySensor =false;
+}
+   }
+</script>
 
 {% block content %}
 
