@@ -105,7 +105,51 @@
     font-size: 28px;
     font-weight: 700;
  }
+.center {
+    text-align: center;
+}
+.pagination {
+    display: inline-block;
+}
 
+.pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+}
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+.pagination a.active {
+    background-color: #3e4b5b;
+    color: white;
+    border: 1px solid #3e4b5b;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+
+ div, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, p, span {
+    text-shadow: none;
+}
+a, div, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, p, span {
+    text-shadow: none;
+}
 
  @media screen and (max-width: 990px) {
     .col{
@@ -194,7 +238,7 @@
     <h3 class="pastors">meet our pastors</h3>
     <div class="row">
         <div class="col">
-            {% for pastor in past %}
+            {% for pastor in ourTeamPastors %}
             <div class="row">
                
                 <div class="col-md-6">
@@ -220,7 +264,34 @@
             {% endfor %}
         </div>
     </div>
+
+        <div class="center">
+            {% if ourTeamPastors.has_other_pages %}
+            <ul class="pagination">
+              {% if ourTeamPastors.has_previous %}
+                <a href="?page={{ ourTeamPastors.previous_page_number }}">&laquo;</a>
+              {% else %}
+                <a class="disabled"><span>&laquo;</span></a>
+              {% endif %}
+        
+              {% for i in ourTeamPastors.paginator.page_range %}
+                {% if ourTeamPastors.number == i %}
+                  <a class="active"><span>{{ i }} <span class="sr-only"></span></span></a>
+                {% else %}
+                  <a href="?page={{ i }}">{{ i }}</a>
+                {% endif %}
+              {% endfor %}
+              {% if ourTeamPastors.has_next %}
+                <a href="?page={{ ourTeamPastors.next_page_number }}">&raquo;</a>
+              {% else %}
+                <a class="disabled"><span>&raquo;</span></a>
+              {% endif %}
+            </ul>
+          {% endif %}  
+    </div>
 </div>
+
+
 
 
 

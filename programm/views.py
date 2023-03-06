@@ -58,8 +58,41 @@ def churchEvent(request):
     return render(request, 'general/event.html',context) 
 
 
-def pastorsInfo(request):
+def pastorsInfoss(request):
     pst = Pastors.objects.all()
     context={'past':pst}
 
     return render(request, 'pastors/abt_pastor.html',context) 
+
+
+
+
+
+
+
+
+def pastorsInfo(request):
+    title ="Search"
+
+    pst = Pastors.objects.all()
+    number  = Pastors.objects.all().count()
+    
+
+    #pagination
+    page =request.GET.get('page', 1)
+    paginator = Paginator(pst, 2)
+    
+    try:
+        ourTeamPastors = paginator.page(page)
+
+    except PageNotAnInteger:
+        ourTeamPastors = paginator.page(1)
+
+    except EmptyPage:   
+        ourTeamPastors = paginator.page(paginator.num_pages)     
+
+
+    context={'ourTeamPastors':ourTeamPastors,'number':number }  
+
+    return render(request, 'pastors/abt_pastor.html',context)
+
