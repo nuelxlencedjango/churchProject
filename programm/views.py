@@ -57,3 +57,9 @@ def churchEvent(request):
     context ={'prog':prog,'gallery':gallery}
     return render(request, 'general/event.html',context) 
 
+
+def pastorsInfo(request):
+    pst = Pastors.objects.all()
+    context={'past':pst}
+
+    return render(request, 'pastors/abt_pastor.html',context) 

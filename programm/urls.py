@@ -13,6 +13,8 @@ urlpatterns =[
     path('transact/',views.transaction, name='transact'),
     path('success/',views.successfulTransaction, name='success'),
     path('church_event/',views.churchEvent,name='church_event'),
+
+    path('pastors/',views.pastorsInfo,name='pastors'),
  
 ]
 

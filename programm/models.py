@@ -76,3 +76,16 @@ class ImageGallery(models.Model):
 
     class Meta:
       verbose_name_plural='Image Gallery'
+
+
+
+
+
+class Pastors(models.Model):
+    fullname = models.CharField(max_length=200)
+    title = models.CharField(max_length=200)
+    description = models.CharField(max_length=200)
+    img = CloudinaryField(blank=True,null=True)
+    description2 = models.CharField(max_length=200)
+    def __str__(self):
+        return f"{self.fullname} - {self.title}"

@@ -5,6 +5,7 @@ from .models import *
 
 admin.site.register(Motivation)
 
+admin.site.register(Pastors)
 
 admin.site.register(DonationAndOffering)
 

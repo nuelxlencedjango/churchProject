@@ -482,20 +482,18 @@ iframe{
 
  
 }
-
+.donation{
+    width: 100%;
+}
 
 /*giving page css*/
 
 .offering ul{
     /* display: flex;
-   
     justify-content: flex-end;*/
-   
-
 position: fixed;
 top: 0;
-right: 0;
-width: 100%;
+width: 99.5%;
 background-color: #333;
 color: #fff;
 padding: 10px;
@@ -745,6 +743,8 @@ form{
 .gallery img:hover {
 	transform: scale(1.1);
 }
+
+
 
 
 @media screen and (max-width: 990px) {

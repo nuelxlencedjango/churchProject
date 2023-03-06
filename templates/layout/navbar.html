@@ -1,5 +1,58 @@
 {% load static %}
-<div class="offering">
+
+
+<style>
+    
+    .toggleNav{
+    width: 100%;
+    height: 400px;
+    background-color: hsl(213, 91%, 36%);;
+    transition: all .5s ease-in-out;
+    display: none;
+    
+    }
+.given, .donation{
+    width: 100%;
+}
+    .toggleNav ul{
+        display: inline-flex;
+        margin-top: 30px;
+    
+    }
+    .toggleNav ul li{
+        list-style: none;
+        transition: all .5s ease-in-out;
+    }
+    a{
+        text-decoration: none;
+    }
+    .nav-title{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    transition: all .5s ease-in-out;
+    
+    }
+    a.menu-link{
+        font-size: 18px;
+        color: #fff;
+        font-family: 'Times New Roman', Times, serif;
+        opacity: .8;
+        transition: all .5s ease-in-out;
+    
+    }
+    a.menu-link:hover{
+       color: black;
+       font-weight: 900;
+    }
+    .addditionInfo .container{
+    
+    }
+    </style>
+
+
+<div class="offering" id="offering">
     <div class="given">
         <div class="donation">
             <ul>
@@ -16,51 +69,6 @@
 </div>
 
 
-<style>
-.toggleNav{
-width: 100%;
-height: 400px;
-background-color: hsl(213, 91%, 36%);;
-transition: all .5s ease-in-out;
-display: none;
-
-}
-.toggleNav ul{
-    display: inline-flex;
-    margin-top: 30px;
-
-}
-.toggleNav ul li{
-    list-style: none;
-    transition: all .5s ease-in-out;
-}
-a{
-    text-decoration: none;
-}
-.nav-title{
-text-transform: uppercase;
-font-size: 20px;
-color: white;
-font-weight: 700;
-transition: all .5s ease-in-out;
-
-}
-a.menu-link{
-    font-size: 18px;
-    color: #fff;
-    font-family: 'Times New Roman', Times, serif;
-    opacity: .8;
-    transition: all .5s ease-in-out;
-
-}
-a.menu-link:hover{
-   color: black;
-   font-weight: 900;
-}
-.addditionInfo .container{
-
-}
-</style>
 <div class="toggleNav" id="toggleNav">
     <div class="addditionInfo">
         <div class="container">
@@ -69,7 +77,7 @@ a.menu-link:hover{
             <li>
                 <div class="col-1">
                     <p class="nav-title">about</p>
-                    <a href="/templates/general/event.html" aria-current="page" class="menu-link w--current">Pastors</a>
+                    <a href="{% url 'programm:pastors' %}" aria-current="page" class="menu-link w--current">Pastors</a>
                     <a href="../general/church_event.html" class="menu-link">Our Story</a>
                     <a href="/about/our-values" class="menu-link">Our Mission</a>
                     <a href="/about/our-beliefs" class="menu-link">Beliefs</a>
@@ -116,22 +124,7 @@ a.menu-link:hover{
 </div>
 
 
-<script>
-let navLinks = document.getElementById('toggleNav');
-let displaySensor = false;
-
-let openFunction = function(){
-    
-if(displaySensor ===false){
-    navLinks.style.display ="block";
-    displaySensor =true;
-}
-else{
-    navLinks.style.display ="none";
-    displaySensor =false;
-}
-   }
-</script>
+<script src="/static/js/script.js"></script>
 
 {% block content %}
 
