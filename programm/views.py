@@ -58,6 +58,8 @@ def churchEvent(request):
     return render(request, 'general/event.html',context) 
 
 
+
+
 def churchStory(request):
   
     return render(request, 'general/story.html') 
