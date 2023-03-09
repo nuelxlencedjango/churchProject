@@ -1,5 +1,5 @@
 {% load static %}
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 <style>
     
@@ -69,7 +69,9 @@
 </div>
 
 
-<div class="toggleNav" id="toggleNav">
+
+
+<div class="toggleNav  animate__animated animate__rotateIn animation-delay-0s" id="toggleNav">
     <div class="addditionInfo">
         <div class="container">
         <ul>
@@ -78,8 +80,8 @@
                 <div class="col-1">
                     <p class="nav-title">about</p>
                     <a href="{% url 'programm:pastors' %}" aria-current="page" class="menu-link w--current">Pastors</a>
-                    <a href="../general/church_event.html" class="menu-link">Our Story</a>
-                    <a href="/about/our-values" class="menu-link">Our Mission</a>
+                    <a href="{% url 'programm:stories' %}" class="menu-link">Our Story</a>
+                    <a href="{% url 'programm:val' %}" class="menu-link">Our Mission</a>
                     <a href="/about/our-beliefs" class="menu-link">Beliefs</a>
                     <a href="/about/resources" class="menu-link">Resources</a>
                 </div>
@@ -123,6 +125,8 @@
 </div>
 </div>
 
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
 <script src="/static/js/script.js"></script>
 

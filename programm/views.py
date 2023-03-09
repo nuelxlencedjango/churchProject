@@ -58,14 +58,9 @@ def churchEvent(request):
     return render(request, 'general/event.html',context) 
 
 
-def pastorsInfoss(request):
-    pst = Pastors.objects.all()
-    context={'past':pst}
-
-    return render(request, 'pastors/abt_pastor.html',context) 
-
-
-
+def churchStory(request):
+  
+    return render(request, 'general/story.html') 
 
 
 
@@ -96,3 +91,22 @@ def pastorsInfo(request):
 
     return render(request, 'pastors/abt_pastor.html',context)
 
+
+
+
+
+def ourValues(request):
+  
+    return render(request, 'general/mission.html') 
+
+
+
+def contactUs(request):
+  
+    return render(request, 'general/contact_us.html') 
+
+
+
+def ourMission(request):
+  
+    return render(request, 'general/mission.html') 

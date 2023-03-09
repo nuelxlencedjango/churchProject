@@ -1,0 +1,81 @@
+
+{% extends 'layout/base.html' %}
+
+{% block content %} 
+
+{% load static %}
+
+{% include 'layout/navbar.html' %}
+
+<style>
+    .offering{
+        height: 0px;
+    }
+ 
+</style>
+
+
+<div class="ourStory animate__animated animate__fadeInLeft">
+    <div class="heading">
+        <h3>our story</h3>
+    </div>
+    <div class="text">
+        <!--<p>We think it’s possible for Christians to be the most generous people there are. We’ve been blessed as a church to always reach beyond ourselves and serve our city and this world because we have generous people. We’ve seen God do extraordinary things in people’s finances when they put God first in their tithes. We dare you to be a generous, selfless contributor and watch God do the extraordinary.“One gives freely, yet grows all the richer; another withholds what he should give, and only suffers want. Whoever brings blessing will be enriched, and one who waters will himself be watered.” Proverbs 11:24-25</p>-->
+    </div>
+    <div class="button">
+       
+    </div>
+</div>
+
+<div class="container">
+    <div class="story-detail">
+        <ul>
+            <li>
+                <img src="/static/images/church_pics/church_story2.jpg" alt="">
+            </li>
+            <li>
+                <h3>A foundation built on faith and family.</h3>
+                <div class="text-details">
+                    <p>The Vision of Story Church is to establish a loving, Christ-centered, and purpose-driven family that grows thousands of people in Christ by building relationships, and showing them how their story fits within the greater Story of God’s love.
+
+                        “…fixing our eyes on Jesus, the author and perfecter of faith, who for the joy set before Him endured the cross.” Hebrews 12:2
+                        
+                        The Mission of Story Church is to bring the love and hope of Jesus Christ to people, and help them discover and live out their unique, God-given purpose.
+                        
+                        “‘For I know the plans I have for you,’ says the Lord. ‘They are plans for good and not for disaster, to give you a future and a hope.’” Jeremiah 29:11
+                        
+                        Purpose (The Great Commission lived through the Great Commandment):
+                        
+                        </div>
+                        <a class="btn btn-danger" href="{% url 'programm:pastors' %}">meet our pastors</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="family">
+<div class="container">
+    <h3>“Family first” isn’t just a warm and fuzzy
+        slogan – it’s who we are.</h3>
+        <div class="text-detail">
+            <p>My family has traditions for every major holiday. Dad always carves the turkey. Grandma makes sweet potato pie, and we always watch "A Christmas Story" on Christmas day. It’s almost a ritual. Likewise, the church has traditions that have been passed down from generation to generation. The Lord’s Supper, or communion, is a great example. For thousands of years, the Church has celebrated communion to remember that Jesus died for our sins on the cross</p>
+        </div>
+        <a class="btn btn-danger" href="{% url 'programm:contact' %}">service times</a>
+</div>
+</div>
+
+<div class="container">
+    <div class="imperfection">
+        <h3>Shoes, shirt, and imperfections required.</h3>
+        <div class="text-detail">
+            <p>An imperfection in someone or something is a fault, weakness, or undesirable feature that they have.
+                He concedes that there are imperfections in the system. [+ in]
+                I was obsessed by my physical imperfections. 
+                Synonyms: fault, failing, weakness, defect   More Synonyms of imperfection</p>
+        </div>
+        <a class="btn btn-danger" href="{% url 'programm:val' %}">our values</a>
+    </div>
+</div>
+
+{% include 'footer/footer.html' %}
+{% endblock %}

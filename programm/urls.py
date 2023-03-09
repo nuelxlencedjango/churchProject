@@ -15,6 +15,11 @@ urlpatterns =[
     path('church_event/',views.churchEvent,name='church_event'),
 
     path('pastors/',views.pastorsInfo,name='pastors'),
- 
+    path('stories/',views.churchStory,name='stories'),
+
+     path('val/',views.ourValues,name='val'),
+    path('contact/',views.contactUs,name='contact'),
+    path('mission/',views.ourMission,name='mission'),
+    
 ]
 

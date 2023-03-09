@@ -89,3 +89,6 @@ class Pastors(models.Model):
     description2 = models.CharField(max_length=200)
     def __str__(self):
         return f"{self.fullname} - {self.title}"
+    
+ 
+    
