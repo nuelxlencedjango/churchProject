@@ -209,7 +209,7 @@ def checkout_session(request):
                         }],
             mode ='payment',
             success_url = 'https://www.jesuschristglobalministries.com/success',
-            cancel_url = 'https://www.jesuschristglobalministries.com/cancel'
+            cancel_url = 'https://www.jesuschristglobalministries.com/transact'
             )
 
             return redirect(session.url, code=303)
