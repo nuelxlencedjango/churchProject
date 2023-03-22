@@ -10,7 +10,19 @@
 {% include 'layout/navbar.html' %}
 
 <style>
-    h3{
+      .offering{
+        height: 0px;
+    }
+   .heading h2{
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 150px;
+    color: #000;
+    font-size: 24px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 700;
+   }
+    #msg{
         text-align: center;
         text-transform: capitalize;
         font-size: 28px;
@@ -18,25 +30,27 @@
         font-weight: 700;
         font-family: 'Times New Roman', Times, serif;
     }
+    #msg{
+        margin-bottom: 100px;
+    }
 </style>
 
-<div class="donation animate__animated animate__rotateIn">
-    <div class="heading">
-        <h3>our story</h3>
+<div class="success">
+    <div class="heading  animate__animated animate__backInLeft animation-delay-0s">
+        <h2>Payment was successful!</h2>
     </div>
-    <div class="text">
-        <p>God is THE giver of every good and perfect gift (James 1:17). As His image-bearers, we are called to copy His giving, to be mini-pictures of His infinitely large heart. The larger our hearts (and the wider our hands), the larger the picture we paint of God’s character. What do people think of God when they think of the way you use your money?  </p>
-            </div>
-    <div class="button">
-       
-    </div>
+    <div class="text nimate__animated animate__backInRight animation-delay-1s">
+        {% if messages %}
+        {% for msg in messages %}
+        <h3 id="msg">{{msg}}</h3>
+        {% endfor %}
+        {% endif %}
+   
+</div>
 </div>
 
-{% if messages %}
-{% for msg in messages %}
-<h3>{{msg}}</h3>
-{% endfor %}
-{% endif %}
+
+
    
 {% include 'footer/footer.html' %}   
 {% endblock %}

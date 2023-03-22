@@ -13,7 +13,8 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, TemplateView, DetailView ,CreateView, UpdateView
 from django.http import HttpResponse
 import stripe
-
+import dotenv
+import os
 from .forms import *
 
 
@@ -122,8 +123,7 @@ def ourBelief(request):
 
 
 
-'''stripe.api_key = "pk_test_51Mh8T2BhrNZX4vu9BOBtByBK1e9SmZBtD7tBhaJGEQiLUgFYqUGPGN8UrmIsdWxL9i2AkrBfdgQUINC1zlxpBj9J002BonlZHT"
-
+'''
 def stripePay(request):
           
    if request.method == "POST":
@@ -162,8 +162,6 @@ def stripePay(request):
                      ) 
         transRetrive = stripe.Charge.retrieve(
                        charge["id"],
-                       api_key="sk_test_51Mh8T2BhrNZX4vu9sVNPNQnSfBcBUia3ENoZrTLURS7FUimXEZwORDevXSOx1MeV8KHu0tDX7LcFX3JZ2ejR17ba00FFaO5i61"
-                        api_key="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"
                         )
         charge.save() 
         return redirect("pay_success/")
@@ -181,10 +179,10 @@ def paysuccess(request):
 
 def cancel_pay(request):
     return render(request, "cancel.html")   
+                    
 
 
-
-stripe.api_key = "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"
+stripe.api_key=os.environ.get('STRIPE_API_KEY')
 def checkout_session(request):
 
     
@@ -192,7 +190,7 @@ def checkout_session(request):
         form = DonationAndOfferingForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.info(request, "Payment was successful! Thank your for donations/offering!!")
+            messages.info(request, "Thank you for your donations/offering. God bless you richly!!")
             #return redirect('programm:success')
             
             amt =int(request.POST.get('amount'))*100
