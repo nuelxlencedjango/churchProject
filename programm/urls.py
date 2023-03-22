@@ -13,6 +13,10 @@ urlpatterns =[
     path('transact/',views.transaction, name='transact'),
     path('success/',views.successfulTransaction, name='success'),
     path('church_event/',views.churchEvent,name='church_event'),
+ 
+    path('checkout/',views.checkout_session,name='checkout'), 
+    path('success/',views.paysuccess,name='success'), 
+    path('cancel/',views.cancel_pay,name='cancel'), 
 
     path('pastors/',views.pastorsInfo,name='pastors'),
     path('stories/',views.churchStory,name='stories'),
@@ -20,6 +24,7 @@ urlpatterns =[
      path('val/',views.ourValues,name='val'),
     path('contact/',views.contactUs,name='contact'),
     path('mission/',views.ourMission,name='mission'),
+    path('belief/',views.ourBelief,name='belief'),
     
 ]
 

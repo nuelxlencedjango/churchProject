@@ -1,13 +1,33 @@
+
 {% extends 'layout/base.html' %}
 
 {% block content %} 
 
 {% load crispy_forms_tags %}
+{% load widget_tweaks %}
 {% load static %}
 
-
-<h3>successful</h3>
-
+{% include 'layout/navbar.html' %}
 
 
-{% endcontent %}
+
+<div class="donation animate__animated animate__rotateIn">
+    <div class="heading">
+        <h3>our story</h3>
+    </div>
+    <div class="text">
+        <p>God is THE giver of every good and perfect gift (James 1:17). As His image-bearers, we are called to copy His giving, to be mini-pictures of His infinitely large heart. The larger our hearts (and the wider our hands), the larger the picture we paint of God’s character. What do people think of God when they think of the way you use your money?  </p>
+            </div>
+    <div class="button">
+       
+    </div>
+</div>
+
+{% if messages %}
+{% for msg in messages %}
+<h3>{{msg}}</h3>
+{% endfor %}
+{% endif %}
+   
+{% include 'footer/footer.html' %}   
+{% endblock %}

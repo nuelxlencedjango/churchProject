@@ -11,7 +11,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core.mail import send_mail
 from django.urls import reverse_lazy
 from django.views.generic import ListView, TemplateView, DetailView ,CreateView, UpdateView
-
+from django.http import HttpResponse
+import stripe
 
 from .forms import *
 
@@ -112,3 +113,114 @@ def contactUs(request):
 def ourMission(request):
   
     return render(request, 'general/mission.html') 
+
+
+
+def ourBelief(request):
+  
+    return render(request, 'general/belief.html') 
+
+
+
+'''stripe.api_key = "pk_test_51Mh8T2BhrNZX4vu9BOBtByBK1e9SmZBtD7tBhaJGEQiLUgFYqUGPGN8UrmIsdWxL9i2AkrBfdgQUINC1zlxpBj9J002BonlZHT"
+
+def stripePay(request):
+          
+   if request.method == "POST":
+        amount = int(request.POST["amount"]) 
+        
+        try:
+            customer = stripe.Customer.create(email=request.POST.get("email"),name=request.POST.get("full_name"),
+			        description="donation", source=request.POST['stripeToken']
+			                           )
+
+        except stripe.error.CardError as e:
+
+            return HttpResponse("<h1>There was an error charging your card:</h1>"+str(e))     
+
+        except stripe.error.RateLimitError as e:
+           
+            return HttpResponse("<h1>Rate error!</h1>")
+
+        except stripe.error.InvalidRequestError as e:
+            return HttpResponse("<h1>Invalid requestor!</h1>")
+
+        except stripe.error.AuthenticationError as e:  
+            return HttpResponse("<h1>Invalid API auth!</h1>")
+
+        except stripe.error.StripeError as e:  
+            return HttpResponse("<h1>Stripe error!</h1>")
+
+        except Exception as e:  
+            pass  
+
+
+
+       
+        charge = stripe.Charge.create(customer=customer,
+			    amount=int(amount)*100, currency='USD', description="donation"
+                     ) 
+        transRetrive = stripe.Charge.retrieve(
+                       charge["id"],
+                       api_key="sk_test_51Mh8T2BhrNZX4vu9sVNPNQnSfBcBUia3ENoZrTLURS7FUimXEZwORDevXSOx1MeV8KHu0tDX7LcFX3JZ2ejR17ba00FFaO5i61"
+                        api_key="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"
+                        )
+        charge.save() 
+        return redirect("pay_success/")
+
+            
+   return render(request, "index.html")
+'''
+
+
+
+def paysuccess(request):
+    return render(request, "success.html")   
+
+
+
+def cancel_pay(request):
+    return render(request, "cancel.html")   
+
+
+
+stripe.api_key = "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"
+def checkout_session(request):
+
+    
+    if request.method == "POST":
+        form = DonationAndOfferingForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.info(request, "Payment was successful! Thank your for donations/offering!!")
+            #return redirect('programm:success')
+            
+            amt =int(request.POST.get('amount'))*100
+            title =request.POST.get('title')
+            session = stripe.checkout.Session.create(
+            payment_method_types =['card'],
+            line_items = [{
+                        'price_data':{
+                         'currency':'USD',
+                          'product_data':{
+                           'name':title,
+                        },
+                        'unit_amount':amt
+                        },
+                        'quantity':1,
+                        }],
+            mode ='payment',
+            success_url = 'https://www.jesuschristglobalministries.com/success',
+            cancel_url = 'https://www.jesuschristglobalministries.com/cancel'
+            )
+
+            return redirect(session.url, code=303)
+
+        
+        form = DonationAndOfferingForm(request.POST)
+        context ={'form':form}
+        return render(request, 'general/donationInfo.html', context)
+    
+    
+    
+

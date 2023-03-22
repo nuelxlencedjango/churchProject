@@ -9,6 +9,7 @@
     background-color: hsl(213, 91%, 36%);;
     transition: all .5s ease-in-out;
     display: none;
+    z-index: 99;
     
     }
 .given, .donation{
@@ -82,7 +83,7 @@
                     <a href="{% url 'programm:pastors' %}" aria-current="page" class="menu-link w--current">Pastors</a>
                     <a href="{% url 'programm:stories' %}" class="menu-link">Our Story</a>
                     <a href="{% url 'programm:val' %}" class="menu-link">Our Mission</a>
-                    <a href="/about/our-beliefs" class="menu-link">Beliefs</a>
+                    <a href="{% url 'programm:belief' %}" class="menu-link">Beliefs</a>
                     <a href="/about/resources" class="menu-link">Resources</a>
                 </div>
             </li>

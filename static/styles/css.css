@@ -991,6 +991,28 @@ a, div, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, p, span {
 }
 
 
+/*our belief*/
+.ourBelief{
+    background-image: url('/static/images/church_pics/cross1.jpg');
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-position: center center;
+    margin-top: 50px;
+}
+
+/* donation */
+.donation{
+    background-image: url('/static/images/church_pics/giving1.jpg');
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-position: center center;
+    margin-top: 50px;
+}
+
 
  @media screen and (max-width: 990px) {
     .pastorsDetails .col{
