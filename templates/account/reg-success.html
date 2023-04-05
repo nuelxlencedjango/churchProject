@@ -7,7 +7,8 @@
 {% load widget_tweaks %}
 {% load static %}
 
-{% include 'layout/navbar.html' %}
+
+{% include 'connection/connection-nav.html' %}
 
 <style>
       .offering{
@@ -25,7 +26,7 @@
     #msg{
         text-align: center;
         text-transform: capitalize;
-        font-size: 28px;
+        font-size: 22px;
         color: hsl(213, 91%, 36%);
         font-weight: 700;
         font-family: 'Times New Roman', Times, serif;
@@ -37,7 +38,7 @@
 
 <div class="success">
     <div class="heading  animate__animated animate__backInLeft animation-delay-0s">
-        <h2>Payment was successful!</h2>
+        <h2>Success!</h2>
     </div>
     <div class="text animate__animated animate__backInRight animation-delay-1s">
         {% if messages %}

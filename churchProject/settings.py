@@ -48,8 +48,8 @@ INSTALLED_APPS = [
     #'whitenoise.runserver_nostatic',
 
       'programm',
-   
-
+      'accounts',
+     'connection',
     'cloudinary',
      'django_countries',
     'crispy_forms',

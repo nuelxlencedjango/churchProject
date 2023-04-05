@@ -1,0 +1,132 @@
+{% extends 'layout/base.html' %}
+
+{% block content %} 
+
+{% load static %}
+{% load widget_tweaks %}
+{% load crispy_forms_tags %}
+{% include 'connection/connection-nav.html' %}
+
+<style>
+    
+ 
+
+@media screen and (max-width:900px) {
+    .track .card {
+border: 0;
+width: 100%;
+}
+.track .card-text{
+    
+    top: -200px !important;
+  
+
+ }
+}
+
+@media screen and (max-width:650px) {
+   .track  .col-lg-6 {
+    width: 100%;
+}
+.time-check{
+    text-align: center;
+}
+.reg {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.track .col-lg-6 a img {
+    width: 100%;
+    height: 250px;
+    padding: 30px;
+}
+.row>* {
+ 
+    width: 100%;
+   
+}
+}
+</style>
+
+
+
+   
+	
+
+
+
+ 
+<div class="track">
+<div class="container">
+    <div class="row">
+       
+            <div class="col-lg-6">
+                {% for event in obj %}
+                <div class="time-check">
+                    <h3>growth track</h3>
+                <p>{{event.startDate}} – {{event.endDate}}</p>
+                </div>
+                {% endfor %}
+                <div class="reg">
+                    
+                    <a href="{% url 'accounts:login' %}" class="btn btn-danger">login</a>
+                    <a href="{% url 'accounts:register' %}" class="btn btn-primary justify-content-end">register</a>
+                </div>
+               
+            </div>
+        
+            <div class="col-lg-6">
+                <div class="card">
+                    <a href="">
+                    <img src="/static/images/church_pics/church_story4.jpg" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <p class="card-text">Track Growth</p>
+                      
+                    </div>
+                  </div>
+            </div>
+           
+          
+    
+    </div>
+</div>
+</div>
+
+<div class="track-detail">
+    <div class="container">
+        <div class="row">
+            {% for detail in obj %}
+            <div class="col-md-8">
+                <h3>details</h3>
+                
+                <p>{{ detail.detail_1}}</p>
+               
+                <p>{{ detail.detail_2 }}</p>
+           
+            </div>
+            {% endfor %}
+            <div class="col-md-4">
+               <div class="timings">
+                <h3>upcoming date</h3>
+                <p>an 1 – Dec 31, 2023</p>
+                <h3>PAST DATES</h3>
+                <p>Jan 1 – Dec 31, 2021</p>
+                <p>Jan 1 – Dec 31, 2022</p>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+{% include 'footer/footer.html' %}
+{% endblock %}

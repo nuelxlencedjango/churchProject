@@ -1,0 +1,17 @@
+
+from django.urls import path
+from .views import *
+from . import views
+
+
+
+
+app_name = 'connection'
+
+urlpatterns =[
+    path('connect/',views.trackGrowth, name='connect'),
+    
+  
+    
+]
+

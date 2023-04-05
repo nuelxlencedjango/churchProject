@@ -60,9 +60,14 @@ class ChurchGallery(models.Model):
     title = models.CharField(max_length=500,null=True,blank=True)
     eventDate = models.DateTimeField(blank=True, null=True)
     img = CloudinaryField('pics',blank=True,null=True)
+   
 
     def __str__(self):
         return self.title
+    
+    class Meta:
+      verbose_name_plural='Church Gallery'
+      ordering = ['-eventDate']
     
 
 
@@ -70,12 +75,14 @@ class ChurchGallery(models.Model):
 class ImageGallery(models.Model):
     eventImg = models.ForeignKey(ChurchGallery,on_delete=models.SET_NULL, null=True, blank=True, related_name="images_church")
     img = CloudinaryField('images',blank=True,null=True)
+    #dateTime =models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
       return str(self.eventImg.title)
 
     class Meta:
       verbose_name_plural='Image Gallery'
+      ordering = ['-eventImg']
 
 
 
@@ -87,6 +94,7 @@ class Pastors(models.Model):
     description = models.CharField(max_length=200)
     img = CloudinaryField(blank=True,null=True)
     description2 = models.CharField(max_length=200)
+    
     def __str__(self):
         return f"{self.fullname} - {self.title}"
     

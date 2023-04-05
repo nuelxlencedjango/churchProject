@@ -937,10 +937,332 @@ a, div, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, p, span {
     transition: .3s all ease-in-out;  
  }
 
+ /*our belief */
+ .belief-heading{
+    position: relative;
+    top: 250px;
+    left: 10px;
+ }
+ .belief-heading h3{
+     font-size: 40px;
+     font-family: 'Times New Roman', Times, serif;
+     font-weight: 700;
+     color: #000;
+     color: hsl(213, 91%, 36%);
+     transition: all .5s ease-in-out;
+     text-transform: uppercase;
+ }
+ .ourBelief .text p{
+     margin: 30px;
+     flex-wrap: wrap;
+ }
+ section{
+     margin-top: 50px;
+     margin-bottom: 50px;
+
+ }
+ .item-belief p{
+   
+     color: #000;
+     font-size: 18px;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     transition: all .5s ease-in-out;
+
+ }
+ section h3{
+     color: hsl(213, 91%, 36%);
+    
+     font-weight: 700;
+     font-family: Arial, Helvetica, sans-serif;
+     margin: 20px;
+     text-align: center;
+     text-transform: capitalize;
+ }
 
    
-
+/*resources*/
+.resources{
   
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100% !important;
+    background-position: center center;
+    margin-top: 50px;
+    background-color: #000;
+    z-index: -1;
+}
+/* resources */
+
+.resource-heading{
+    /*text-align: center;*/
+    color: white;
+    position: relative;
+    top: 150px;
+    left: 40px;
+   
+ }
+ .resource-heading h3{
+  font-size: 50px;
+  text-transform: capitalize;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 700;
+  
+ }
+ .resource-menu{
+  
+ }
+
+ .resource-menu ul {
+  display: inline-flex;
+ 
+ }
+.resource-menu ul li{
+  list-style: none;
+  font-size: 24px;
+  color: hsl(213, 91%, 36%);;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  margin: 20px;
+  cursor: pointer;
+}
+.resource-menu ul li a{
+  text-decoration: none;
+  color: #000;
+  color: hsl(213, 91%, 36%);;
+}
+.resource-management{
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+.resource-management ul li{
+  text-align: center;
+  list-style: none;
+  margin-top: 150px;
+ 
+}
+.resource-management ul li h3{
+  color: #000;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 30px;
+  color: hsl(213, 91%, 36%);;
+}
+.resource-management ul li .main-p{
+  text-align: left;
+  margin-left: 100px;
+  padding-right: 100px;
+}
+
+.resource-management h3{
+  margin: 20px;
+ 
+  text-transform: capitalize;
+  font-size: 22px;
+}
+#finances h3{
+  font-weight: 700;
+}
+.rules-1,.foundational-rules, .marriage-rules, .single-rules,.mind-body-spirit-rules{
+  text-align: left;
+  margin-top: 100px;
+  display: none;
+  transition: all .5s ease-in-out;
+  margin-left: 50px;
+
+}
+.rules-1 p, .foundational-rules p, .marriage-rules p, .single-rules p, .mind-body-spirit-rules p{
+  font-size: 16px;
+  text-align: left;
+  margin-left: 0px;
+  margin-bottom: 50px;
+}
+.rules-1 span{
+  color: hsl(213, 91%, 36%);
+}
+h4{
+  color: hsl(213, 91%, 36%); 
+}
+.fa{
+  cursor: pointer;
+  font-size: 30px;
+}
+
+/*connection nav*/
+.growthT{
+      
+    position: sticky;
+    z-index: 1;
+   }
+  .growthT .navbar-brand{
+   position: absolute;
+   top: 0;
+  } 
+.track{
+   margin-top: 80px;
+  
+}
+.growthT .nav-link{
+   color: hsl(213, 91%, 36%);
+   font-weight: 500;
+   font-size: 16px;
+}
+.growthT nav ul li {
+   list-style: none;
+   display: inline-block;
+   margin: 10px !important;
+}
+
+
+/*growth page*/
+.track .card{
+    border: 0;
+    width: 30rem;
+ }
+ .track .card-text{
+    position: relative;
+    top: -250px !important;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 900;
+    color: white;
+
+ }
+ .time-check h3{
+    color: hsl(213, 91%, 36%);
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: capitalize;
+ }
+ .track .btn-primary{
+    margin:0;
+    text-transform: capitalize;
+    font-size: 20px;
+    background-color: hsl(213, 91%, 36%);;
+ }
+.reg{
+    margin-top: 100px;
+}
+.track-detail{
+    margin-bottom: 150px;
+}
+.track-detail h3{
+    text-transform: capitalize;
+    font-size: 18px;
+    color: hsl(213, 91%, 36%);
+}
+.track-detail p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   
+}
+.track-detail .col-md-4{
+   
+}
+.timings{
+    margin-left: 50px;
+}
+/*register and login*/
+.content-wrapper{
+    margin-top: 100px;
+  }
+  .reg-form{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 20px;
+    color: #000;
+    color: hsl(213, 91%, 36%);;
+    margin-bottom: 50px;
+  }
+  
+@media screen and (max-width: 700px) {
+  .resource-menu ul li{
+   
+  font-size: 18px;
+  
+
+
+  margin: 10px;
+
+  }
+}
+@media screen and (max-width: 500px) {
+  .resource-menu .container{
+  margin: 2px;
+
+  }
+  .resource-menu ul li{
+   
+   font-size: 16px;
+   margin: 5px;
+ 
+   }
+   .resource-management ul li {
+  text-align: left;
+  margin-top: 100px;
+}  
+.resource-management ul li h3 {
+
+  font-size: 20px;
+  text-align: left;
+}
+.resource-management ul li .main-p {
+  text-align: left;
+  margin-left: 10px;
+}
+.fa{
+  text-align: left;
+  margin-left: 30px;
+}
+}
+@media screen and (max-width: 400px) {
+  .resource-menu .container {
+  margin: 0;
+  padding: 0;
+}
+ol, ul {
+  padding-left: 0.1rem;
+}
+.resource-menu ul li {
+  font-size: 14px;
+  font-weight: 500;
+}
+.resource-heading h3 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.resource-management ul li .main-p {
+  text-align: left;
+  margin-left: 10px;
+  padding-right: 10px; 
+  width: 100%;
+  /* padding: 10px; */
+  overflow-wrap: break-word;
+}
+.resource-management h3 {
+  margin: 10px;
+  text-transform: capitalize;
+  font-size: 22px;
+}
+.rules-1, .foundational-rules, .marriage-rules, .single-rules, .mind-body-spirit-rules {
+  text-align: left;
+  margin-top: 100px;
+  display: none;
+  transition: all .5s ease-in-out;
+  margin-left: 10px;
+}
+}
+@media screen and (max-width: 350px){
+.resource-menu ul li {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 2px;
+}
+}
+
+
 @media screen and (max-width: 570px) {
     .story-detail ul{
         display: block;
@@ -1002,6 +1324,7 @@ a, div, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, p, span {
     margin-top: 50px;
 }
 
+
 /* donation */
 /*.success{
     background-image: url('/static/images/church_pics/giving2.jpg');
@@ -1031,6 +1354,16 @@ a, div, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, p, span {
         width: 450px;
         flex-wrap: wrap;
     }  
+    .ourBelief {
+        height: auto;
+    }
+
+.belief-heading {
+    top: 10px;
+}
+.belief-heading h3 {
+    font-size: 24px;
+}
  }
  @media screen and (max-width: 940px) {
     .pastorsDetails .product-card {

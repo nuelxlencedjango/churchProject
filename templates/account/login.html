@@ -1,0 +1,52 @@
+{% extends 'layout/base.html' %}
+
+{% block content %} 
+
+{% load static %}
+
+
+  {% load widget_tweaks %}
+{% load crispy_forms_tags %}
+{% include 'connection/connection-nav.html' %}
+
+ 
+
+
+
+<div class="container">
+  
+    <div class="content-wrapper">
+        {% if form.errors %}
+  <div class="alert alert-danger">
+      <strong> {{ form.errors }}</strong>
+    </div>
+    {% endif %}
+    <h3 class="reg-form">login form</h3>
+<form enctype="multipart/form-data" class="container" method="post" id="product_form">
+    {% csrf_token %}
+    
+
+       <div class="row">
+       
+        <div class="form-group mb-4  col-md-6">
+           <label class="form-label">Username</label>
+            {% render_field form.username|attr:'required:true' class="form-control" %}
+            
+        </div>
+        <div class="form-group mb-4  col-md-6">
+            <label class="form-label">Password</label>
+            {% render_field form.password|attr:'required:true' class="form-control" %}
+            
+        </div>
+       </div>
+       <button class="btn btn-danger" type="submit">submit</button>
+</form>
+    </div>
+</div>
+
+    
+
+
+
+{% include 'footer/footer.html' %}
+{% endblock %}

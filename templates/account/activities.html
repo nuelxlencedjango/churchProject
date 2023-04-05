@@ -1,0 +1,28 @@
+{% extends 'layout/base.html' %}
+
+{% block content %} 
+
+{% load crispy_forms_tags %}
+{% load widget_tweaks %}
+{% load static %}
+
+
+{% include 'connection/connection-nav.html' %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>activity one</h3>
+        </div>
+        <div class="col-md-12">
+            <h3>activity two</h3>
+        </div>
+    </div>
+</div>
+
+
+
+   
+{% include 'footer/footer.html' %}   
+{% endblock %}

@@ -1,0 +1,288 @@
+
+{% extends 'layout/base.html' %}
+
+{% block content %} 
+
+{% load static %}
+
+{% include 'layout/navbar.html' %}
+<link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
+
+
+<style>
+    .offering{
+       height: 0px;
+   }
+ 
+</style>
+
+
+
+<div class="resources animate__animated animate__bounceInDown">
+    <div class="resource-heading">
+        <h3>resources &</h3>
+        <h3>recommendation</h3>
+    </div>
+
+</div>
+
+<div class="resource-menu">
+  <div class="container">
+    <ul>
+        <li><a href="#finances">Finances </a></li>
+        <li><a href="#marriage">Marriage </a></li>
+        <li><a href="#lifelong">Parenting </a></li>
+        <li><a href="#single">Single Living </a></li>
+        <li><a href="#mind-body-spirit">Healthy Living </a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="resource-management">
+    <ul>
+        <li id="finances">
+            <h3>The Road To Generous Living</h3>
+            <p class="main-p">I learned years ago that the measure you give is the measure that returns to you. Putting God first in your finances is very important. Everything we are and everything we have is from God and belongs to Him.</p>
+        
+    
+            <h3>5 foundational rules</h3>
+           <h1 onclick="rulesFunction()"><i  class="fa fa-angles-down"></i></h1>
+            <div class="rules-1" id="rules-1">
+                <div class="">
+                    <h4><span>1</span>. Keep good records</h4>
+                    <h2></h2>
+                <p >“Riches can disappear fast… so watch your business interests closely. Know the state of your flocks.” Proverbs 27:23-24 (LB)</p>
+                </div>
+                <div class="">
+                    <h4><span>2</span>. Plan your spending</h4>
+                    <p>“Plan carefully and you will have plenty; if you act too quickly, you will never have enough.” Proverbs 21:5 (GN)</p>
+                </div>
+                <div class="">
+                    <h4><span>3</span>. Save for the future</h4>
+                    <p>“The wise man saves for the future, but the foolish man spends whatever he gets.” Proverbs 21:20 (LB)
+
+                    </p>
+                </div>
+                <div class="">
+                    <h4><span>4</span>. Enjoy what you have</h4>
+                    <p>“Keep your lives free from the love of money and be content with what you have.” Hebrews 13:5 (NIV)
+
+                    </p>
+                </div>
+
+                <div class="">
+                    <h4><span>5</span>. Give the tithe back to God</h4>
+                    <p>“Honor the Lord by giving Him the first part of all your income, and He will fill your barns… to OVERFLOW!” Proverbs 3:9-10 (LB)</p>
+                </div>
+                    </div>
+               </li>
+        
+               <li id="lifelong">
+                <h3>Lifelong happines</h3>
+                <p class="main-p">Building a healthy marriage is rewarding, but it won’t just happen without being intentional. After 34 years of marriage, we’ve  learned success can only be found in a Christ-filled marriage. The Bible is full of practical examples of what God’s design for marriage truly looks like</p>
+            
+                <h3>5 foundational rules</h3>
+                <h1 onclick="foundationFunction()"><i  class="fa fa-angles-down"></i></h1>
+                <div class="foundational-rules" id="foundational-rules">
+                    <div class="foundation-1">
+                        <h4>1. Keep Moving Forward</h4>
+                    <p>“and if he sins against you seven times in the day, and turns to you seven times, saying, ‘I repent,’ you must forgive him” Luke 17:4 (ESV)</p>
+                    </div>
+                    <div class="foundation-2">
+                        <h4>2. Rejoice in highs and lows</h4>
+                        <p>“A bowl of vegetables with someone you love is better than steak with someone you hate.” Proverbs 15:17 (NLT)</p>
+                    </div>
+                    <div class="foundation-3">
+                        <h4>3. Speak life and build each other up</h4>
+                        <p>“Gentle words are a tree of life; a deceitful tongue crushes the spirit.” Proverbs 15:4 (NLT)
+    
+                        </p>
+                    </div>
+                    <div class="foundation-4">
+                        <h4>4. Always greet each other with affection</h4>
+                        <p>“Kiss me again and again, for your love is sweeter than wine.” Song of Solomon 1:2 (NLT)
+    
+                        </p>
+                    </div>
+    
+                    <div class="foundation-5">
+                        <h4>5. Not every fight is worth fighting</h4>
+                        <p>“Good sense makes one slow to anger, and it is his glory to overlook an offense.” Proverbs 19:11 (ESV)</p>
+                    </div>
+                        </div>
+               </li>
+               <li id="marriage">
+                <h3>Raising Our Future, God’s way</h3>
+                <p class="main-p">Building a healthy marriage is rewarding, but it won’t just happen without being intentional. After 34 years of marriage, we’ve  learned success can only be found in a Christ-filled marriage. The Bible is full of practical examples of what God’s design for marriage truly looks like</p>
+
+                <h3>5 foundational rules</h3>
+                <h1 onclick="marriageFunction()"><i  class="fa fa-angles-down"></i></h1>
+                <div class="marriage-rules" id="marriage-rules">
+                    <div class="">
+                        <h4>1. Keep Moving Forward</h4>
+                    <p>“and if he sins against you seven times in the day, and turns to you seven times, saying, ‘I repent,’ you must forgive him” Luke 17:4 (ESV)</p>
+                    </div>
+                    <div class="">
+                        <h4>2. Rejoice in highs and lows</h4>
+                        <p>“A bowl of vegetables with someone you love is better than steak with someone you hate.” Proverbs 15:17 (NLT)</p>
+                    </div>
+                    <div class="">
+                        <h4>3. Speak life and build each other up</h4>
+                        <p>“Gentle words are a tree of life; a deceitful tongue crushes the spirit.” Proverbs 15:4 (NLT)
+    
+                        </p>
+                    </div>
+                    <div class="">
+                        <h4>4. Always greet each other with affection</h4>
+                        <p>“Kiss me again and again, for your love is sweeter than wine.” Song of Solomon 1:2 (NLT)
+    
+                        </p>
+                    </div>
+    
+                    <div class="">
+                        <h4>5. Not every fight is worth fighting</h4>
+                        <p>“Good sense makes one slow to anger, and it is his glory to overlook an offense.” Proverbs 19:11 (ESV)</p>
+                    </div>
+                        </div>
+               </li>
+               <li id="single">
+                <h3>Godly Principles For The Single</h3>
+                <p class="main-p">Being single doesn’t mean being alone. In fact, for some it’s the way God intended life to be. For those who have the desire to experience marriage, your single living days should be spent being content and preparing for the future God has for you, whether married or alone</p>
+             
+                <h3>5 foundational rules</h3>
+                <h1 onclick="singleFunction()"><i  class="fa fa-angles-down"></i></h1>
+                <div class="single-rules" id="single-rules">
+                    <div class="">
+                        <h4>1. Keep Moving Forward</h4>
+                    <p>“and if he sins against you seven times in the day, and turns to you seven times, saying, ‘I repent,’ you must forgive him” Luke 17:4 (ESV)</p>
+                    </div>
+                    <div class="">
+                        <h4>2. Rejoice in highs and lows</h4>
+                        <p>“A bowl of vegetables with someone you love is better than steak with someone you hate.” Proverbs 15:17 (NLT)</p>
+                    </div>
+                    <div class="">
+                        <h4>3. Speak life and build each other up</h4>
+                        <p>“Gentle words are a tree of life; a deceitful tongue crushes the spirit.” Proverbs 15:4 (NLT)
+    
+                        </p>
+                    </div>
+                    <div class="">
+                        <h4>4. Always greet each other with affection</h4>
+                        <p>“Kiss me again and again, for your love is sweeter than wine.” Song of Solomon 1:2 (NLT)
+    
+                        </p>
+                    </div>
+    
+                    <div class="">
+                        <h4>5. Not every fight is worth fighting</h4>
+                        <p>“Good sense makes one slow to anger, and it is his glory to overlook an offense.” Proverbs 19:11 (ESV)</p>
+                    </div>
+                        </div>
+               </li>
+
+               <li id="mind-body-spirit">
+                <h3>Mind, Body & Spirit</h3>
+                <p class="main-p">We see from Jesus in Luke 2:52 a perfect definition of living healthy. It has less to do with diet and exercise, while that’s part of it, and more to do with your physical, spiritual and emotional well-being. To live the extraordinary life God has for us it requires purposeful living in all these areas</p>
+                
+
+                <h3>5 foundational rules</h3>
+                <h1 onclick="mindFunction()"><i  class="fa fa-angles-down"></i></h1>
+                <div class="mind-body-spirit-rules" id="mind-body-spirit-rules">
+                    <div class="">
+                        <h4>1. Keep Moving Forward</h4>
+                    <p>“and if he sins against you seven times in the day, and turns to you seven times, saying, ‘I repent,’ you must forgive him” Luke 17:4 (ESV)</p>
+                    </div>
+                    <div class="">
+                        <h4>2. Rejoice in highs and lows</h4>
+                        <p>“A bowl of vegetables with someone you love is better than steak with someone you hate.” Proverbs 15:17 (NLT)</p>
+                    </div>
+                    <div class="">
+                        <h4>3. Speak life and build each other up</h4>
+                        <p>“Gentle words are a tree of life; a deceitful tongue crushes the spirit.” Proverbs 15:4 (NLT)
+    
+                        </p>
+                    </div>
+                    <div class="">
+                        <h4>4. Always greet each other with affection</h4>
+                        <p>“Kiss me again and again, for your love is sweeter than wine.” Song of Solomon 1:2 (NLT)
+    
+                        </p>
+                    </div>
+    
+                    <div class="">
+                        <h4>5. Not every fight is worth fighting</h4>
+                        <p>“Good sense makes one slow to anger, and it is his glory to overlook an offense.” Proverbs 19:11 (ESV)</p>
+                    </div>
+                        </div>
+               </li>
+    </ul>
+</div>
+
+
+<script>
+    let rules = document.getElementById("rules-1");
+    let foundational = document.getElementById("foundational-rules");
+    let marriage = document.getElementById("marriage-rules");
+    let single = document.getElementById("single-rules");
+    let mind = document.getElementById("mind-body-spirit-rules");
+    let turnOn = true;
+
+    let rulesFunction = function(){
+        if(turnOn === true){
+            rules.style.display ="block";
+            turnOn =false;
+        }
+        else{
+            rules.style.display ="none";
+            turnOn =true;
+        }
+    }
+    let foundationFunction = function(){
+        if(turnOn === true){
+            foundational.style.display ="block";
+            turnOn =false;
+        }
+        else{
+            foundational.style.display ="none";
+            turnOn =true;
+        }
+    }
+
+    let marriageFunction = function(){
+        if(turnOn === true){
+            marriage.style.display ="block";
+            turnOn =false;
+        }
+        else{
+            marriage.style.display ="none";
+            turnOn =true;
+        }
+    }
+    let singleFunction = function(){
+        if(turnOn === true){
+            single.style.display ="block";
+            turnOn =false;
+        }
+        else{
+            single.style.display ="none";
+            turnOn =true;
+        }
+    }
+    let mindFunction = function(){
+        if(turnOn === true){
+            mind.style.display ="block";
+            turnOn =false;
+        }
+        else{
+            mind.style.display ="none";
+            turnOn =true;
+        }
+    }
+
+</script>
+
+
+{% include 'footer/footer.html' %}
+{% endblock %}

@@ -84,14 +84,14 @@
                     <a href="{% url 'programm:stories' %}" class="menu-link">Our Story</a>
                     <a href="{% url 'programm:val' %}" class="menu-link">Our Mission</a>
                     <a href="{% url 'programm:belief' %}" class="menu-link">Beliefs</a>
-                    <a href="/about/resources" class="menu-link">Resources</a>
+                    <a href="{% url 'programm:resource' %}" class="menu-link">Resources</a>
                 </div>
             </li>
 
             <li>
                 <div class="col-2">
                     <p class="nav-title">connect</p>
-                    <a href="/about/pastors-2" aria-current="page" class="menu-link w--current">growth track</a>
+                    <a href="{% url 'connection:connect' %}" aria-current="page" class="menu-link w--current">growth track</a>
                     <a href="/about/our-story" class="menu-link">small groups</a>
                     <a href="/about/our-values" class="menu-link">kids</a>
                     <a href="/about/our-beliefs" class="menu-link">youths</a>

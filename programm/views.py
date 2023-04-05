@@ -54,9 +54,11 @@ def successfulTransaction(request):
 
 
 def churchEvent(request):
-    prog = ChurchPrograms.objects.all()
-    gallery = ChurchGallery.objects.all()
+    prog = ChurchPrograms.objects.all().order_by('-eventDate')
+    gallery = ChurchGallery.objects.all().order_by('-eventDate')
+
     context ={'prog':prog,'gallery':gallery}
+    
     return render(request, 'general/event.html',context) 
 
 
@@ -123,54 +125,6 @@ def ourBelief(request):
 
 
 
-'''
-def stripePay(request):
-          
-   if request.method == "POST":
-        amount = int(request.POST["amount"]) 
-        
-        try:
-            customer = stripe.Customer.create(email=request.POST.get("email"),name=request.POST.get("full_name"),
-			        description="donation", source=request.POST['stripeToken']
-			                           )
-
-        except stripe.error.CardError as e:
-
-            return HttpResponse("<h1>There was an error charging your card:</h1>"+str(e))     
-
-        except stripe.error.RateLimitError as e:
-           
-            return HttpResponse("<h1>Rate error!</h1>")
-
-        except stripe.error.InvalidRequestError as e:
-            return HttpResponse("<h1>Invalid requestor!</h1>")
-
-        except stripe.error.AuthenticationError as e:  
-            return HttpResponse("<h1>Invalid API auth!</h1>")
-
-        except stripe.error.StripeError as e:  
-            return HttpResponse("<h1>Stripe error!</h1>")
-
-        except Exception as e:  
-            pass  
-
-
-
-       
-        charge = stripe.Charge.create(customer=customer,
-			    amount=int(amount)*100, currency='USD', description="donation"
-                     ) 
-        transRetrive = stripe.Charge.retrieve(
-                       charge["id"],
-                        )
-        charge.save() 
-        return redirect("pay_success/")
-
-            
-   return render(request, "index.html")
-'''
-
-
 
 def paysuccess(request):
     return render(request, "success.html")   
@@ -222,3 +176,6 @@ def checkout_session(request):
     
     
 
+def resourceControl(request):
+
+    return render(request, 'general/resources.html')
