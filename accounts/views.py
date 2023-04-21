@@ -100,4 +100,3 @@ def successPage(request):
     return render(request,'account/reg-success.html')   
 
 
-#are you an agent?

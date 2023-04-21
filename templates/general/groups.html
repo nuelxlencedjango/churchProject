@@ -1,0 +1,88 @@
+
+{% extends 'layout/base.html' %}
+
+{% block content %} 
+
+{% load static %}
+
+{% include 'layout/navbar.html' %}
+
+
+<style>
+     .offering{
+        height: 0px;
+    }
+    .groups{
+    background-image: url('/static/images/church_pics/group3.jpg');
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-position: center center;
+    margin-top: 50px;
+    object-fit: cover;
+}
+.cell h3{
+    color: white;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    position: relative;
+    top: 150px;
+    margin-left: 10px;
+}
+.item-belief a{
+    margin-top: 50px;
+    margin-left: 50px !important;
+}
+.col-md-6{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+</style>
+
+<div class="groups animate__animated animate__bounceInDown">
+    <div class="cell">
+        <h3>Cell Memberships</h3>
+    </div>
+   
+   
+</div>
+
+<section>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Embrace the love of a family.</h3>
+            <div class="item-belief">
+                <p>Small Groups have one, simple purpose: to bring people together. We believe God created us to live in relationship with others and only then can we live the full life He intends for us. Sharing life through community is part of our design, but meaningful relationships aren’t always easy to find. That’s why Small Groups exist—to make these life-changing relationships relevant and accessible to you.</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h3>Join a group</h3>
+            <div class="item-belief">
+                <p>We need the right relationships. At Skybreak Church, we believe that life moves at the speed of your relationships!</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            
+            <div class="item-belief">
+                <a href="" class="btn btn-danger">join a group</a>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <h3>Host a group</h3>
+            <div class="item-belief">
+                <p>We need the right relationships. At Skybreak Church, we believe that life moves at the speed of your relationships!</p>
+            </div>
+        </div>
+     
+    </div>
+</div>
+</section>
+
+
+
+{% include 'footer/footer.html' %}
+{% endblock %}

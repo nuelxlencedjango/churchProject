@@ -92,7 +92,7 @@
                 <div class="col-2">
                     <p class="nav-title">connect</p>
                     <a href="{% url 'connection:connect' %}" aria-current="page" class="menu-link w--current">growth track</a>
-                    <a href="/about/our-story" class="menu-link">small groups</a>
+                    <a href="{% url 'programm:cells' %}" class="menu-link">small groups</a>
                     <a href="/about/our-values" class="menu-link">kids</a>
                     <a href="/about/our-beliefs" class="menu-link">youths</a>
                     <a href="/about/resources" class="menu-link">baptism</a>
@@ -115,8 +115,8 @@
                 <div class="col-4">
                     <p class="nav-title">contact</p>
 
-                    <a href="/about/our-story" class="menu-link">give</a>
-                    <a href="/about/our-values" class="menu-link">Our Mission</a>
+                    <a href="{% url 'programm:transact' %}" class="menu-link">give</a>
+                    <a href="{% url 'programm:val' %}" class="menu-link">Our Mission</a>
                     <a href="/about/our-beliefs" class="menu-link">events</a>
                     
                 </div>

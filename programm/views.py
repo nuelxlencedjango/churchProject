@@ -179,3 +179,10 @@ def checkout_session(request):
 def resourceControl(request):
 
     return render(request, 'general/resources.html')
+
+
+
+
+def smallGroups(request):
+
+    return render(request,'general/groups.html')

@@ -26,6 +26,8 @@ urlpatterns =[
     path('mission/',views.ourMission,name='mission'),
     path('belief/',views.ourBelief,name='belief'),
     path('resource/',views.resourceControl,name='resource'),
+     path('cells/',views.smallGroups,name='cells'),
+     
     
 ]
 

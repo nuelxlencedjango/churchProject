@@ -1335,7 +1335,17 @@ ol, ul {
     background-position: center center;
     margin-top: 50px;
 }*/
-
+ 
+/*our mission*/
+.groups{
+    background-image: url('/static/images/pastoral/pastor_faith.jpg');
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-position: center center;
+    margin-top: 50px;
+}
 
  @media screen and (max-width: 990px) {
     .pastorsDetails .col{
