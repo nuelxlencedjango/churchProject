@@ -32,8 +32,7 @@ SECRET_KEY=os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = ['127.0.0.1', 'web-production-988d.up.railway.app','www.jesuschristglobalministries.com','jesuschristglobalministries.com']
-
+ALLOWED_HOSTS = ['127.0.0.1', 'web-production-85af.up.railway.app','www.jesuschristglobalministries.com','jesuschristglobalministries.com']
 
 # Application definition
 
@@ -179,5 +178,5 @@ EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
 
 
 
-CSRF_TRUSTED_ORIGINS=['https://web-production-988d.up.railway.app','https://www.jesuschristglobalministries.com']
+CSRF_TRUSTED_ORIGINS=['https://web-production-85af.up.railway.app','https://www.jesuschristglobalministries.com']
 
