@@ -84,6 +84,7 @@ nav ul li:hover{
     bottom: 0;
     z-index: -1;
     width: 100%;
+    top: 0;
 
 }
 .connections{
@@ -460,6 +461,7 @@ iframe{
 /* toggle bar*/
 .navbar-toggler{
     display: none;
+
   }
 /*map css*/
 .mapouter{
@@ -1112,7 +1114,7 @@ h4{
 .growthT nav ul li {
    list-style: none;
    display: inline-block;
-   margin: 10px !important;
+   margin: 10px !important; 
 }
 
 
