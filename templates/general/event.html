@@ -19,23 +19,22 @@
 
 
 
-<style>
-  
-</style>
-
-<body>
 	<div class="gallery">
         {% for p in gallery %}
 		<div class="item">
+          <a href="">
             <img src="{{p.img.url }}">
+          </a>
         </div>
         {% for i in p.images_church.all %}
         <div class="item">
+           <a href="">
             <img src="{{i.img.url }}">
+           </a>
         </div>
         {% endfor %}
         {% endfor %}
-		
+		<a href="">hello</a>
 	</div>
 
     
@@ -43,4 +42,4 @@
 {% include 'footer/footer.html' %}
 
 {% endblock %}
-</html>
+
