@@ -78,7 +78,7 @@ class ImageGallery(models.Model):
     #dateTime =models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-      return self.eventImg
+      return str(self.eventImg)
 
     class Meta:
       verbose_name_plural='Image Gallery'
