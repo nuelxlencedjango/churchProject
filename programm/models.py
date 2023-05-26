@@ -99,4 +99,18 @@ class Pastors(models.Model):
         return f"{self.fullname} - {self.title}"
     
  
+
+
+class UpcomingEvents(models.Model):
+    event_name = models.CharField(max_length=200)
+    startDate =models.DateField()
+    endDate = models.DateTimeField(blank=True, null=True)
+    timing =models.TimeField()
+    venue = models.CharField(max_length=200)
+    description = models.TextField(max_length=200)
+    img = CloudinaryField(blank=True,null=True)
+   
     
+    
+    def __str__(self):
+        return f"{self.event_name} - {self.venue}"    
