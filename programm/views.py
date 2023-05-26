@@ -54,8 +54,8 @@ def successfulTransaction(request):
 
 
 def churchEvent(request):
-    prog = ChurchPrograms.objects.all().order_by('eventDate')
-    gallery = ChurchGallery.objects.all().order_by('eventDate')
+    prog = ChurchPrograms.objects.all().order_by('-eventDate')
+    gallery = ChurchGallery.objects.all().order_by('-eventDate')
 
     context ={'prog':prog,'gallery':gallery}
     
