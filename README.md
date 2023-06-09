@@ -1,4 +1,4 @@
-# churchProject
+
 # A simple webapp for a church activities.
 # API integration
   Database Api integration for data management
