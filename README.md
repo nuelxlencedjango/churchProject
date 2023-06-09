@@ -1,5 +1,5 @@
 
-# A simple webapp for  church activities.
+# A simple webapp for church activities.
 # API integration
   Database Api integration for data management
 # Registration & login system 
