@@ -122,11 +122,11 @@ nav ul li:hover{
 }
 .churchMessage{
     transition: all 3s ease-in;
-    background-color: hsl(213, 91%, 36%);
-    height: 80vh;
+    background-color: hsl(213, 91%, 36%); 
+    height: 100vh;
 }
 .churchMessage .information .container{ 
-    width: auto;
+    width: auto; 
    margin-left: 250px;
   
    word-break: break-all;
@@ -135,7 +135,7 @@ nav ul li:hover{
 .churchMessage .information > .container{
    
    position: relative;
-   top: 80px;
+   top: 80px; 
 }
 .information .container h3{
     text-transform: uppercase;
@@ -143,16 +143,16 @@ nav ul li:hover{
     color: #fff;
 }
 .information .container .text{
-    margin: 30px;
+    margin: 20px;
     width: 700px;
 }
 .information .container .text h2{
-    margin-top: 30px;
+    margin-top: 10px;
     color: #fff;
     font-size: 22px;
 }
 .information .container .text p{
-    margin-top: 20px;
+    margin-top: 10px;
     color: #fff;
     font-size: 16px;
     font-weight: 200;
@@ -163,7 +163,7 @@ nav ul li:hover{
     font-family: 'Times New Roman', Times, serif
 }
  .text .readmore{
-    margin-top: 60px;
+    margin-top: 30px;
     width: 150px;
     border: 2x solid hsl(213, 91%, 36%);
     background-color: #fff;
@@ -1958,7 +1958,7 @@ color: white;
     
       
     }
-    .churchMessage {
+    .churchMessage { 
         height: auto;
     }
     .e-church{
