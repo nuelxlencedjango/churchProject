@@ -183,6 +183,9 @@ def resourceControl(request):
 
 
 
+
+
+
 def smallGroups(request):
 
     return render(request,'general/groups.html')
