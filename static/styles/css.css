@@ -135,7 +135,7 @@ nav ul li:hover{
 .churchMessage .information > .container{
    
    position: relative;
-   top: 80px; 
+   top: 50px; 
 }
 .information .container h3{
     text-transform: uppercase;
