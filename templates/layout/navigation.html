@@ -84,7 +84,6 @@ nav ul li a {
 }
 
   </style>
-
   <nav>
             <img src="/static/images/brand/brand_global_ministry.jpeg" class="logo" alt="">
              <ul id="navbar-toggle-ul">
@@ -93,8 +92,8 @@ nav ul li a {
                 <li><a href="https://www.youtube.com/@Jcgmoutreach1">sermon</a></li>
                 <li><a href="{% url 'programm:giving' %}">giving</a></li>
                 <li><a href="{% url 'programm:church_event' %}">image gallery</a></li>
-                <li><a href="{% url 'programm:church_event' %}">up coming events</a></li>
-                <li><a href="">contact</a></li>
+                <li><a href="{% url 'programm:upcoming' %}">up coming events</a></li>
+                <li><a href="{% url 'programm:contact' %}">contact us</a></li>
                 <li><a href="{% url 'programm:val' %}">mission</a></li>
                 
              </ul>

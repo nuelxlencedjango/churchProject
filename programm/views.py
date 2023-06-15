@@ -59,7 +59,7 @@ def churchEvent(request):
 
     context ={'prog':prog,'gallery':gallery}
     
-    return render(request, 'general/event.html',context) 
+    return render(request, 'general/event.html',context)  
 
 
 
@@ -184,6 +184,11 @@ def resourceControl(request):
 
 
 
+
+def upcomingEvent(request):
+    events =UpcomingEvents.objects.all()
+    context={'events':events}
+    return render(request,'general/upcoming.html', context) 
 
 
 def smallGroups(request):

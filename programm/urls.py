@@ -27,7 +27,7 @@ urlpatterns =[
     path('belief/',views.ourBelief,name='belief'),
     path('resource/',views.resourceControl,name='resource'),
      path('cells/',views.smallGroups,name='cells'),
-     
+     path('upcoming/',views.upcomingEvent,name='upcoming'),
     
 ]
 

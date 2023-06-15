@@ -1,0 +1,179 @@
+
+{% extends 'layout/base.html' %}
+
+{% block content %} 
+
+{% load static %}
+
+{% load widget_tweaks %}
+{% load crispy_forms_tags %}
+
+{% include 'layout/navbar.html' %}
+
+
+<style>
+     .offering{
+        height: 0px;
+    }
+    .groups{
+    background-image: url('/static/images/church_pics/contact2.jpg');
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-position: center center;
+    margin-top: 50px;
+    object-fit: cover;
+    position: relative;
+    z-index: -1; 
+
+}
+.cell h3{
+    color: white;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    position: relative;
+    top: 150px;
+    margin-left: 10px;
+}
+.item-belief a{
+    margin-top: 50px;
+    margin-left: 50px !important;
+}
+.col-md-6{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.event-img{
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+    /*height: 800px;*/
+
+}
+.fa{
+    text-align: center;
+    color: black;
+}
+.col-md-6 p{
+    text-align: center;
+}
+.socials{
+    margin-left: 120px;
+}
+.timings a{
+    text-align: center;
+    width: 80px;
+    height: 75px;
+    border-radius: 50%;
+    margin: 20px;
+    text-decoration: none;
+    color: black;
+}
+</style>
+
+<div class="groups animate__animated animate__bounceInDown">
+    <div class="cell">
+        <h3>contact us anytime,anyday</h3>
+    </div>
+   
+   
+</div>
+
+<section>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>contact details</h3>
+            <div class="item-belief">
+                <p>We welcome your questions, prayer requests,testimonies,feedback,suggestions and any other inquiries you may have. Please feel free to reach out to us using the contact information provided below.</p>
+            
+               <p>One of our pastors will contact you soon.</p>
+            </div>
+        </div>
+       
+        <div class="col-md-6">
+            <h3> Phone number</h3>
+            <p><span><i class="fa fa-phone" aria-hidden="true"></i></span> &nbsp; &nbsp; +19792043600</p>
+            <div class="item-belief">
+                <p>{{ even.description }}</p>
+            </div>
+            <div class="timings">
+                <h3> Email</h3>
+                <p>jesuchristinco@gmail.com</p>
+                <h3>Social media</h3>
+        
+               <div class="socials">
+                <a href=""> <i class="fa-brands fa-facebook"></i></a>
+               <a href=""><i class="fa-brands fa-twitter"></i></a>
+               <a href=""><i class="fa-brands fa-youtube"></i></a>
+               <a href=""><i class="fa-brands fa-instagram"></i></a>
+               </div>
+                
+               </div>
+        </div>
+        <div class="col-md-6">
+            
+<div class="container">
+  
+    <div class="cont-wrapper">
+        {% if form.errors %}
+  <div class="alert alert-danger">
+      <strong> {{ form.errors }}</strong>
+    </div>
+    {% endif %}
+    <h3 class="reg-form">Send us a  form</h3>
+<form enctype="multipart/form-data"  method="post" id="product_form">
+    {% csrf_token %}
+    
+
+       <div class="row">
+       
+       
+        <div class="form-group mb-4  col-md-6">
+            <label class="form-label">Full Name</label>
+            {% render_field form.first_name|attr:'required:true' class="form-control" %}
+           
+        </div>
+        <div class="form-group mb-4  col-md-6 ">
+            <label class="form-label">Topic</label>
+            {% render_field form.last_name|attr:'required:true' class="form-control" %}
+           
+        </div>
+        <div class="form-group mb-4  col-md-6">
+            <label class="form-label">Email</label>
+            {% render_field form.email|attr:'required:true' class="form-control" %}
+            
+        </div>
+        <div class="form-group mb-4  col-md-6">
+            <label class="form-label">Phone number</label>
+            {% render_field form.password1|attr:'required:true' class="form-control" %}
+            
+        </div>
+        <div class="form-group mb-4  col-md-6">
+            <label class="form-label">Message</label>
+            {% render_field form.password2|attr:'required:true' class="form-control" %}
+            
+        </div>
+      
+      
+       </div>
+       <button class="btn btn-danger" type="submit">submit</button>
+      
+</form>
+    </div>
+</div>
+        </div>
+      
+
+    
+     
+    </div>
+</div>
+</section>
+
+
+
+{% include 'footer/footer.html' %}
+{% endblock %}
