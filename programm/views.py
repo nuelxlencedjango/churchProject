@@ -109,14 +109,16 @@ def ourValues(request):
 
 
 def contactUs(request):
-    
+    form = ContactForm()
     if request.method =='POST':
         #get topic message ,message tittle,phone number,email address
+        form = ContactForm(request.POST)
         name = request.POST['name']
         phone = request.POST.get("phone" ,False)
         email = request.POST['email']
         message  = request.POST['message']
         topic = request.POST.getlist('topic')
+        
 
         # seend a mail
         send_mail(
@@ -126,24 +128,23 @@ def contactUs(request):
             message ,      # main message
             phone, # items
 
-
             [settings.EMAIL_HOST_USER], # recipient, to email
         fail_silently=False)
         
         contacts = ContactUs()
-        contacts.name =message_name
-        contacts.phone = message_phone
-        contacts.email = message_email
-        contacts.selected_properties = products
+        contacts.name =name
+        contacts.phone = phone
+        contacts.email = email
+        contacts.topic = topic
         contacts.message = message
         contacts.save()
-
-
-        return render(request ,'email.html',{'message_name' :message_name}) 
+       
+        return render(request, 'general/contact_us.html',{'message_name' :name}) 
 
     else:
-        return render(request ,'contactus.html', {'items':items}) 
-    return render(request, 'general/contact_us.html') 
+        context={'form':form}
+        return render(request ,'general/contact_us.html',context) 
+   
 
 
 
@@ -159,7 +160,6 @@ def ourBelief(request):
 
 
 
-
 def paysuccess(request):
     return render(request, "success.html")   
 
@@ -172,8 +172,6 @@ def cancel_pay(request):
 
 stripe.api_key=os.environ.get('STRIPE_API_KEY')
 def checkout_session(request):
-
-    
     if request.method == "POST":
         form = DonationAndOfferingForm(request.POST)
         if form.is_valid():
@@ -213,9 +211,6 @@ def checkout_session(request):
 def resourceControl(request):
 
     return render(request, 'general/resources.html')
-
-
-
 
 
 

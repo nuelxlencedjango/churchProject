@@ -45,3 +45,14 @@ class DonationAndOfferingForm(forms.ModelForm):
 
      #   super(DonationAndOfferingForm,self).__init__(*args ,**kwargs)
       #  self.fields['title'].empty_label ="select title"
+
+
+
+ 
+class ContactForm(forms.ModelForm):
+    
+    class Meta:
+        model = ContactUs
+        fields ='__all__'
+
+            
