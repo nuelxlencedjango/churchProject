@@ -13,7 +13,7 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, TemplateView, DetailView ,CreateView, UpdateView
 from django.http import HttpResponse
 import stripe
-import dotenv
+from django.conf import settings
 import os
 from .forms import *
 
@@ -107,8 +107,42 @@ def ourValues(request):
 
 
 
+
 def contactUs(request):
-  
+    
+    if request.method =='POST':
+        #get topic message ,message tittle,phone number,email address
+        name = request.POST['name']
+        phone = request.POST.get("phone" ,False)
+        email = request.POST['email']
+        message  = request.POST['message']
+        topic = request.POST.getlist('topic')
+
+        # seend a mail
+        send_mail(
+            name , # email subject
+            phone, #phone no
+            email , # from email 
+            message ,      # main message
+            phone, # items
+
+
+            [settings.EMAIL_HOST_USER], # recipient, to email
+        fail_silently=False)
+        
+        contacts = ContactUs()
+        contacts.name =message_name
+        contacts.phone = message_phone
+        contacts.email = message_email
+        contacts.selected_properties = products
+        contacts.message = message
+        contacts.save()
+
+
+        return render(request ,'email.html',{'message_name' :message_name}) 
+
+    else:
+        return render(request ,'contactus.html', {'items':items}) 
     return render(request, 'general/contact_us.html') 
 
 
