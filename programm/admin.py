@@ -13,6 +13,7 @@ admin.site.register(DonationAndOffering)
 admin.site.register(ChurchPrograms)
 
 admin.site.register(UpcomingEvents)
+admin.site.register(ContactUs)
 
 class ImageGalleryAdmin(admin.StackedInline):
     model = ImageGallery

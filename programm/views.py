@@ -112,39 +112,40 @@ def contactUs(request):
     form = ContactForm()
     if request.method =='POST':
         #get topic message ,message tittle,phone number,email address
-        form = ContactForm(request.POST)
-        name = request.POST['name']
+        #form = ContactForm(request.POST)
+        message_name = request.POST['name']
         phone = request.POST.get("phone" ,False)
-        email = request.POST['email']
-        message  = request.POST['message']
-        topic = request.POST.getlist('topic')
+        message_email = request.POST['email']
+        message  = request.POST.get('message')
+        topic = request.POST.get('phone')
+        
         
 
         # seend a mail
-        send_mail(
-            name , # email subject
-            phone, #phone no
-            email , # from email 
-            message ,      # main message
-            phone, # items
+        send_mail( 
+            message_name,
+            message_email, 
+            message,
 
-            [settings.EMAIL_HOST_USER], # recipient, to email
+            [settings.EMAIL_HOST_USER],
         fail_silently=False)
         
         contacts = ContactUs()
-        contacts.name =name
+        contacts.name =message_name
         contacts.phone = phone
-        contacts.email = email
+        contacts.email = message_email
         contacts.topic = topic
         contacts.message = message
         contacts.save()
        
-        return render(request, 'general/contact_us.html',{'message_name' :name}) 
+        return render(request, 'general/contact_us.html',{'message_name' :message_name}) 
 
     else:
         context={'form':form}
         return render(request ,'general/contact_us.html',context) 
    
+
+
 
 
 

@@ -55,4 +55,20 @@ class ContactForm(forms.ModelForm):
         model = ContactUs
         fields ='__all__'
 
+    
+    Widget ={
+          
+            'name':forms.TextInput( attrs={'class':'form-control','placeholder':'Full Name'}),
+           
+            'topic':forms.TextInput( attrs={'class':'form-control'}),
+          
+            'message':forms.Textarea( attrs={'class':'form-control'}),
+           
+            'email':   forms.EmailInput( attrs={'class':'form-control'}),
+           
+            'phone':forms.TextInput(attrs={'class':'form-control'}),
+            
+           
+            }    
+
             

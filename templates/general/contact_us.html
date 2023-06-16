@@ -123,7 +123,7 @@
       <strong> {{ form.errors }}</strong>
     </div>
     {% endif %}
-    <h3 class="reg-form">Send us a  form</h3>
+    <h3 class="reg-form">Send us a message  form</h3>
 <form enctype="multipart/form-data"  method="post" id="product_form">
     {% csrf_token %}
     
@@ -132,14 +132,10 @@
        
         <div class="form-group mb-4  col-md-6">
             <label class="form-label">Full Name</label>
-            {% render_field form.first_name|attr:'required:true' class="form-control" %}
+            {% render_field form.name|attr:'required:true' class="form-control" %}
            
         </div>
-        <div class="form-group mb-4  col-md-6 ">
-            <label class="form-label">Topic</label>
-            {% render_field form.last_name|attr:'required:true' class="form-control" %}
-           
-        </div>
+       
         <div class="form-group mb-4  col-md-6">
             <label class="form-label">Email</label>
             {% render_field form.email|attr:'required:true' class="form-control" %}
@@ -147,12 +143,18 @@
         </div>
         <div class="form-group mb-4  col-md-6">
             <label class="form-label">Phone number</label>
-            {% render_field form.password1|attr:'required:true' class="form-control" %}
+            {% render_field form.phone|attr:'required:true' class="form-control" %}
             
         </div>
-        <div class="form-group mb-4  col-md-6">
+        <div class="form-group mb-4  col-md-6 ">
+            <label class="form-label">Topic</label>
+            {% render_field form.topic|attr:'required:true' class="form-control" %}
+           
+        </div>
+        <div class="form-group mb-4  col-md-12">
             <label class="form-label">Message</label>
-            {% render_field form.password2|attr:'required:true' class="form-control" %}
+           
+            <textarea class="form-group  mb-4" name="message" id="" cols="30" rows="10" required></textarea>
             
         </div>
       
