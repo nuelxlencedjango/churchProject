@@ -240,7 +240,7 @@ nav ul li:hover{
 .slide{
     transition: all 3s ease-in;
     height: 75vh;
-    background-color: hsl(213, 91%, 36%)
+    background-color: hsl(213, 91%, 36%);
 }
 
 .slide .motivation{
@@ -658,7 +658,7 @@ li h5 i{
 .qst li.active .fourthQuestion,
 .qst li.active .fifthQuestion,
 .qst li.active .sixQuestion,
-.qst li.active .seventhQuestion  {
+.qst li.active .seventhQuestion  { 
   display: block;
 }
 
@@ -980,8 +980,16 @@ a, div, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, p, span {
      text-align: center;
      text-transform: capitalize;
  }
-
+.nav-link{
+    color: #fff !important;
+}
+.nav-item:hover{
+    text-decoration: underline;
    
+    
+
+}   
+
 /*resources*/
 .resources{
   
@@ -1160,6 +1168,7 @@ h4{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
    
 }
+
 .track-detail .col-md-4{
    
 }
@@ -1495,7 +1504,7 @@ ol, ul {
     }
     .owl-theme .owl-nav.disabled+.owl-dots {
         margin-top: 5px;
-        margin-bottom: 10px;
+        margin-bottom: 10px; 
 
     }
     .container, .container-sm {
@@ -1609,7 +1618,7 @@ select{
     }
     .owl-theme .owl-nav.disabled+.owl-dots {
         margin-top: 5px;
-        margin-bottom: 10px;
+        margin-bottom: 10px; 
 
     }
     .container, .container-sm {

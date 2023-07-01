@@ -100,7 +100,6 @@ WSGI_APPLICATION = 'churchProject.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 
-
 DATABASES = {
       'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -174,7 +173,13 @@ cloudinary.config(
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+#You may fill in as follows:
+#Email_host: mail.privateemail.com
+#Email_host user: contact@jesuschristglobalministries.com
+#Email_host password: your Private Email password
+#Email_port: 465
+#Email_use_SSL: true
+#Alternatively, you may leave the TLS port: 587
 
 
 EMAIL_HOST=os.environ.get('EMAIL_HOST')                           

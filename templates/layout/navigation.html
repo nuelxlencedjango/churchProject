@@ -84,17 +84,23 @@ nav ul li a {
 }
 
   </style>
+
+ 
+
+
+
+
   <nav>
             <img src="/static/images/brand/brand_global_ministry.jpeg" class="logo" alt="">
              <ul id="navbar-toggle-ul">
                 <!--<li><a href="/" >home</a></li>-->
                 <!--<li><a href="https://www.youtube.com/@jcgmprayer5157">sermon</a></li>-->
-                <li><a href="https://www.youtube.com/@Jcgmoutreach1">sermon</a></li>
-                <li><a href="{% url 'programm:giving' %}">giving</a></li>
-                <li><a href="{% url 'programm:church_event' %}">image gallery</a></li>
-                <li><a href="{% url 'programm:upcoming' %}">up coming events</a></li>
-                <li><a href="{% url 'programm:contact' %}">contact us</a></li>
-                <li><a href="{% url 'programm:val' %}">mission</a></li>
+                <li class="nav-item"><a class="nav-link " href="https://www.youtube.com/@Jcgmoutreach1">sermon</a></li>
+                <li class="nav-item"><a class="nav-link {% if request.path == '/programm:giving' %} active {% endif %}" href=" {% url 'programm:giving' %}">giving</a></li>
+                <li class="nav-item"><a class="nav-link {% if request.path == '/church_event' %} active {% endif %}" href="{% url 'programm:church_event' %}">image gallery</a></li>
+                <li class="nav-item"><a class="nav-link {% if request.path == '/upcoming' %} active {% endif %}" href="{% url 'programm:upcoming' %}">up coming events</a></li>
+                <li class="nav-item"><a class="nav-link {% if request.path == '/contact' %} active {% endif %}" href="{% url 'programm:contact' %}">contact us</a></li>
+                <li class="nav-item"><a class="nav-link {% if request.path == '/val' %} active {% endif %}" href=" {% url 'programm:val' %}">mission</a></li>
                 
              </ul>
       <button style="color: #000; font-size: 40px;" class="navbar-toggler" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
