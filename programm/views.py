@@ -100,11 +100,9 @@ def pastorsInfo(request):
 
 
 
-
 def ourValues(request):
   
     return render(request, 'general/mission.html') 
-
 
 
 
@@ -144,8 +142,6 @@ def contactUs(request):
         context={'form':form}
         return render(request ,'general/contact_us.html',context) 
    
-
-
 
 
 
